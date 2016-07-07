@@ -1,0 +1,1404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>{Title}</title>
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+
+
+	<!--THEME BY JCWAYLND!!! LIKE/REBLOG IF USINGG!!!
+	theme base by hawtornes
+	-->
+
+	<meta name="color:Background" content="#ffffff"/>
+	<meta name="color:Text" content="#a8a8a8"/>
+	<meta name="color:selection" content="#a8a8a8"/>
+	<meta name="color:Sidebar Links" content="#b8b8b8"/>
+	<meta name="color:DescriptionText" content="#b8b8b8"/>
+	<meta name="color:Border" content="#dddddd"/>
+	<meta name="color:Hover" content="#f2f2f2"/>
+	<meta name="color:Scrollbar" content=""/>
+	<meta name="color:ScrollbarBg" content=""/>
+	<meta name="color:Post Links" content="#c0bfbf"/>
+	<meta name="color:Answer Backg" content="#000000"/>
+	<meta name="color:italic" content="#a8a8a8"/>
+	<meta name="color:bold" content="#a8a8a8"/>
+	<meta name="image:Sidebar" content=""/>
+	<meta name="image:Background" content=""/>
+	<meta name="text:Link 1" content="" />
+	<meta name="text:Link 1 Text" content="" />
+	<meta name="text:Link 2" content="" />
+	<meta name="text:Link 2 Text" content="" />
+	<meta name="text:Link 3" content="" />
+	<meta name="text:Link 3 Text" content="" />
+	<meta name="if:Show Link 1" content="1" />
+	<meta name="if:Show Link 2" content="1" />
+	<meta name="if:Show Link 3" content="1" />
+
+
+	<style type="text/css">
+
+		/* Style from Me (Arjun Kalburgi) */
+
+		.divider-title-pos {
+			margin: 0;
+		}
+
+		iframe {
+			display: block;
+			margin: 0 auto;
+		}
+
+		@media only screen and (max-width: 600px) {
+			.parallax-container {
+				display: none;
+			}
+			.card .card-content .card-title {
+				line-height: 100%; 
+				font-size: 135%; 
+			}
+			.card .card-content p {
+				white-space: nowrap;
+			}
+			.md-modal .md-content div {
+				max-height: 450px;
+				overflow-y: scroll;
+			}
+			.md-modal .md-content div::-webkit-scrollbar {display: none;}
+		}
+
+
+		.point {
+			cursor: pointer;
+		}
+
+		button {
+			border: none;
+			padding: 0.6em 1.2em;
+			background: rgba(0,0,0,0.1);
+			color: #fff;
+			font-family: 'Lato', Calibri, Arial, sans-serif;
+			font-size: 1em;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			cursor: pointer;
+			display: inline-block;
+			margin: 3px 2px;
+			border-radius: 2px;
+		}
+
+		button:hover {
+			background: rgba(0,0,0,0.2);
+		}
+
+		#team {padding-bottom: 4rem;}
+
+		.parallax {
+			background-size: cover;
+			position: absolute;
+		}
+		.parallax-container {
+			margin-top: 96px;
+		}
+
+		@media only screen and (min-width: 993px) {
+			.side-card-text {
+				width: 66.6666% !important; 
+				/*width: 66.66666%;*/
+			}
+		}
+
+		@media only screen and (max-width: 992px) {
+			.side-card-text {
+				width: 50% !important;
+			}
+			.side-text-card {
+				width: 50% !important;
+			}
+		}
+
+		/*#divider-banner {
+		background: url("/img/bg-image-green.jpg") fixed;
+		background: url("C:/Users/Arjun/Documents/LocalProjects/askalburgi.github.io/img/bg-image-green.jpg") fixed;
+		background: url("C:/Users/Arjun/Documents/Projects/askalburgi.github.io/img/bg-image-green.jpg") fixed;
+		background-size: cover;
+		max-height: 400px;
+		position: relative;
+		margin-top: 96px;
+		}*/
+
+		.contact-media-links {
+		padding: 0 0 15px 0;
+		}
+
+		.more-button {
+		float: right;
+		background-color: #007E60;
+		font-weight: bold;
+		}
+		.more-button:hover {color: #007E60;}
+
+		.button {cursor: pointer;}
+
+		.project-side {
+		width: 100%;
+		padding: 10px; 
+		text-align: left;
+		}
+
+		.row.project {
+		margin-bottom: 50px; 
+		}
+
+		.project a {
+		margin-right: 0px !important;
+		}
+
+		.my-footer {
+		height: 0%;
+		padding-top: 10% !important;
+		}
+
+		@media only screen and (min-width : 993px) {
+		.social {
+			margin-left: 10% !important;
+		}
+		}
+		/* Safari/Chrome, Firefox, IE9, Opera */
+		/*.card .waves-effect i {
+		-webkit-transition: all 1s ease; 
+		-moz-transition: all 1s ease; 
+		-ms-transition: all 1s ease; 
+		-o-transition: all 1s ease; 
+		transition: all 1s ease;
+		}
+
+		.card .waves-effect i:hover {
+		-webkit-transform:scale(1.25); 
+		-moz-transform:scale(1.25); 
+		-ms-transform:scale(1.25); 
+		-o-transform:scale(1.25); 
+		transform:scale(1.25);}
+		}*/
+
+
+		.more-card-subtitle {
+		line-height: 10px !important;
+		color: #007E60 !important;
+		}
+
+		.project-side img {
+		width: inherit;
+		}
+
+		nav {
+		background-color: #007E60 !important; 
+		transition: background-color 2s;
+		}
+
+		.green-nav {
+		background-color: #007E60 !important; 
+		}
+
+		.banner-text-pos {
+		margin: 11% auto;
+		}
+
+		/****************************************************************************************************************************** 
+		* I changed up some of the things below, but most 
+		* of it is still Joash's.
+		*   - Arjun
+		*/
+
+		/* Custom Stylesheet */
+		/**
+		*
+		* Made By Joash Pereira
+		* Thanks for MaterializeCSS.com
+		*/
+
+
+		/*.default_color{background-color: #007E60/*084D3F,2196F3 !important}*/
+		.default_color{background-color: #007E60/*084D3F,2196F3*/;}
+
+		.default_color_text{color: #007E60/*084D3F,2196F3*/ !important}
+
+		.icon-block {
+			padding: 0 15px;
+		}
+
+		#intro, #work, #team, #contact {padding-top: 4rem;}
+
+		#index-banner {
+			background: no-repeat url("/img/bg-image41.jpg") fixed;
+			/*background: no-repeat url("C:/Users/Arjun/Documents/Projects/website/askalburgi.github.io/img/bg-image41.jpg") fixed;*/
+			background-size: cover;
+			min-height: 625px;
+			/*max-height: 864px;*/
+			position: relative;
+			/*background-color: #007E60/*084D3F,2196F3*/;*/
+		}
+
+		#nav_f{
+			box-shadow: none !important; 
+			-webkit-box-shadow:none !important;
+		}
+
+		.text_h {
+			padding: 15% 0;
+			font-size: 6.0em;
+			font-weight: 100;
+			color:white;
+		}
+
+		.brand-logo{
+			position: absolute;
+			color: #fff;
+			display: inline-block;
+			font-size: 2.1rem;
+			font-style: normal;
+			font-weight: 100;
+			padding: 0;
+			letter-spacing: 7px;
+		}
+
+		.text_h2 {font-weight: 100;margin-bottom: 4%; line-height: 4.5rem;width: 95%;margin: auto;}
+
+		@media only screen and (max-width: 600px) {
+			.text_h2 {
+				line-height: 130%; 
+				font-size: 215%;
+			}
+		}
+
+
+		.span_h2 {font-weight: 300;color: #007E60/*084D3F,2196F3*/;}
+
+		.text_b{color: #007E60/*084D3F,2196F3*/;}
+
+		.in{font-weight: 400 !important; font-style: normal !important;}
+
+		.promo i {
+			color: #007E60/*084D3F,2196F3*/;
+			font-size: 7rem;
+			display: block;
+		}
+		.card-content a {color: #007E60/*084D3F,2196F3*/;}
+
+		.card-content a:hover {color: #007E60/*084D3F,2196F3*/;}
+
+		/*#work, #team{background: rgb(247, 247, 247);}*/
+
+		.text_pink{color:#EF9A9A;}
+
+		nav ul a {
+			font-size: 1.2rem;
+			color: #FFF;
+			letter-spacing: 2px;
+			display: block;
+			font-weight: 300;
+			padding: 0px 15px;
+		}
+
+		.cd-headline.type .cd-words-wrapper {
+			vertical-align: top;
+			overflow: hidden;
+		}
+
+		.cd-headline.type .cd-words-wrapper::after {
+			/* vertical bar */
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			bottom: auto;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+			height: 90%;
+			width: 1px;
+			background-color: #aebcb9;
+		}
+
+		.cd-headline.type .cd-words-wrapper.waiting::after {
+			-webkit-animation: cd-pulse 1s infinite;
+			-moz-animation: cd-pulse 1s infinite;
+			animation: cd-pulse 1s infinite;
+		}
+		.cd-headline.type .cd-words-wrapper.selected {
+			background-color: #FFF;
+		}
+
+		.cd-headline.type .cd-words-wrapper.selected::after {
+			visibility: hidden;
+		}
+
+		.cd-headline.type .cd-words-wrapper.selected b {
+			color: #007E60/*084D3F,2196F3*/;
+		}
+
+		.cd-headline.type b {
+			visibility: hidden;
+		}
+
+		.cd-headline.type b.is-visible {
+			visibility: visible;
+		}
+
+		.cd-headline.type i {
+			position: absolute;
+			visibility: hidden;
+		}
+		.cd-headline.type i.in {
+			position: relative;
+			visibility: visible;
+		}
+
+		@-webkit-keyframes cd-pulse {
+			0% {
+				-webkit-transform: translateY(-50%) scale(1);
+				opacity: 1;
+			}
+			40% {
+				-webkit-transform: translateY(-50%) scale(0.9);
+				opacity: 0;
+			}
+			100% {
+				-webkit-transform: translateY(-50%) scale(0);
+				opacity: 0;
+			}
+		}
+		@-moz-keyframes cd-pulse {
+			0% {
+				-moz-transform: translateY(-50%) scale(1);
+				opacity: 1;
+			}
+			40% {
+				-moz-transform: translateY(-50%) scale(0.9);
+				opacity: 0;
+			}
+			100% {
+				-moz-transform: translateY(-50%) scale(0);
+				opacity: 0;
+			}
+		}
+
+		@keyframes cd-pulse {
+			0% {
+				-webkit-transform: translateY(-50%) scale(1);
+				-moz-transform: translateY(-50%) scale(1);
+				-ms-transform: translateY(-50%) scale(1);
+				-o-transform: translateY(-50%) scale(1);
+				transform: translateY(-50%) scale(1);
+				opacity: 1;
+			}
+			40% {
+				-webkit-transform: translateY(-50%) scale(0.9);
+				-moz-transform: translateY(-50%) scale(0.9);
+				-ms-transform: translateY(-50%) scale(0.9);
+				-o-transform: translateY(-50%) scale(0.9);
+				transform: translateY(-50%) scale(0.9);
+				opacity: 0;
+			}
+			100% {
+				-webkit-transform: translateY(-50%) scale(0);
+				-moz-transform: translateY(-50%) scale(0);
+				-ms-transform: translateY(-50%) scale(0);
+				-o-transform: translateY(-50%) scale(0);
+				transform: translateY(-50%) scale(0);
+				opacity: 0;
+			}
+		}
+
+
+		/* Preloader */
+		#preloader {
+			position: fixed;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			background-color:#fff; /* change if the mask should have another color then white */
+			z-index:1200; /* makes sure it stays on top */
+		}
+
+		#status {
+			width:200px;
+			height:200px;
+			position:absolute;
+			left:50%; /* centers the loading animation horizontally one the screen */
+			top:50%; /* centers the loading animation vertically one the screen */
+			background-image:url(../img/status.gif); /* path to your loading animation */
+			background-repeat:no-repeat;
+			background-position:center;
+			margin:-100px 0 0 -100px; /* is width and height divided by two */
+		}
+
+		@media only screen and (max-width: 480px) {
+			.text_h {
+				padding: 4% 0;
+				font-size: 5em;
+				font-weight: 100;
+				color: white;
+			}
+		}
+
+		input, textarea {
+			border-bottom: 1px solid #fff;
+		}
+
+		nav a.button-collapse {
+			left: -25px;
+		}
+
+		.card-avatar .waves-effect {
+			text-align: center;
+			margin-top: 20px;
+			height: 126px;
+		}
+
+		div.waves-effect i {
+			vertical-align: text-bottom;
+		}
+
+		.card-avatar img {
+			height: 150px;
+			width: 150px;
+			border-radius: 75px;
+		}
+
+		.card-avatar .card-content {
+			text-align: center;
+		}
+
+		.card .card-content p {
+			margin: 15px 0px;
+		}
+
+		.card-avatar .card-content i {
+			font-size: 1.5rem;
+		}
+
+		.card-avatar .card-content .card-title {
+			line-height: 30px !important;
+		}
+
+		.parallax-container {
+			max-height: 400px;
+		}
+
+		footer.page-footer {
+			margin-top: 0px !important;
+		}
+
+		::-webkit-scrollbar-thumb {
+			height:auto;
+			background-color:{color:Scrollbar};
+		}
+
+		::-webkit-scrollbar {
+			height:9px;
+			width:10px;
+			background-color:{color:ScrollbarBg};
+		}
+
+		body {
+			background:{color:background};
+			margin:0px;
+			color:{color:text};
+			font-family:Roboto;
+			/*font-size:10px;*/
+			line-height:100%;
+			letter-spacing:0px;
+			text-align:justify;
+			/*background-image:url('{image:Background}');*/
+		}
+
+		a {
+			text-decoration:none;
+			outline:none;
+			-moz-outline-style:none;
+			color:{color:Post Links};
+		}
+
+		img {
+			border:none;
+		}
+
+		blockquote {
+			padding-left:5px;
+			border-left:2px solid;
+		}
+
+		blockquote blockquote {
+			padding-left:5px;
+			border-left:2px solid;
+		}
+
+		h1 {
+			font-size:16px;
+			letter-spacing:4px;
+			text-transform:uppercase;
+			font-family:'Roboto';
+			font-style:none;
+			line-height:10px;
+			text-align:left;
+			padding:0px;
+		}
+
+		h1 a {
+			color: #007E60;
+		}
+
+		h2 {
+			font-size:14px;
+			letter-spacing: 4px;
+			text-transform:uppercase;
+			font-family: 'Roboto';
+			line-height: 10px;
+			text-align: left;
+			padding: 0px;
+		}
+
+		a:hover {
+			/*color:#000000;*/
+			-moz-transition-duration:0.3s;
+			-webkit-transition-duration:0.3s;
+			-o-transition-duration:0.3s;
+		}
+
+		em {
+			color:{color:italic};
+		}
+
+		strong {
+			color: {color:bold};
+		}
+
+		b {
+			color: {color:bold};
+		}
+
+		::selection {
+			color:{color:selection};
+		}
+
+		::-moz-selection {
+			color:{color:selection};
+		}
+
+		::-webkit-selection {
+			color:{color:selection};
+		}
+
+		/*ENTRIES*/
+
+		#entries {
+			color: rgba(0,0,0,0.87);
+			text-align: left;
+			padding:10px;
+			width:500px;
+			margin-left:502px;
+			margin-top:5px;
+			/*font-size:16px;*/
+			font-family:'Roboto';
+			letter-spacing:0px;
+			line-height: 20px;
+		}
+
+		#post {
+			width:500px;
+			padding-bottom:40px;
+			padding:25px;
+			margin-top:50px;
+		}
+
+		/*SIDEBAR*/
+
+		#sidebar {
+			position:fixed;
+			margin-left:150px;
+			margin-top:80px;
+			background: #007E60;
+		}
+
+		#sidebarimage img {
+			width:188px;
+			margin-top:5px;
+			padding:3px;
+			margin-left:-68px;
+		}
+
+		#sidebarimage img:hover {
+			opacity:0.7;
+			-moz-transition-duration:0.6s;
+			-webkit-transition-duration:0.6s;
+			-o-transition-duration:0.6s;
+		}
+
+		.links {
+			width:170px;
+			font-family:'Roboto';
+			padding-top: 5px;
+			padding-bottom: 4px;
+			padding-right: 10px;
+			padding-left: 9px;
+			text-align:center;
+			position:fixed;
+			margin-top:5px;
+			margin-left:-66px;
+			background-color: #f7f7f7;
+			border-bottom:1px solid {color:border};
+		}
+
+		.links a {
+			width:94px;
+			/*padding:3px;*/
+			font-style:italic;
+			font-size:10px;
+			letter-spacing:0px;
+			color:{color:Sidebar Links};
+		}
+
+		.links a:hover {
+			-moz-transition-duration:0.3s;
+			-webkit-transition-duration:0.3s;
+			-o-transition-duration:0.3s;
+			color:{color:Hover};
+		}  
+
+		#description {
+			text-align:center;
+			font-family:'Roboto';
+			width:160px;
+			letter-spacing:1px;
+			font-style:italic;
+			margin-top:9px;
+			margin-left:-3px;
+			font-size:15px;
+			position:fixed;
+			text-transform:none;
+			color:{color:DescriptionText};
+		}
+
+		#pagination {
+			font-style:bold;
+			padding:2px;
+			font-family:'Roboto';
+			letter-spacing:0px;
+			font-size:12px;
+			text-align:center;
+			padding:2px;
+			margin-top:20px;
+			text-transform:lowercase;
+		}
+
+		#pagination a {
+			font-size:9px;
+		}
+
+
+		/*POST INFO*/
+
+		#info {  
+			color: #292929;
+			width:auto;
+			text-align:center;
+			font-family:'Roboto';
+			margin-top:0px;
+			margin-left:px;
+			letter-spacing:1px;
+			font-size:15px;
+			font-style:none;
+			padding-right:1px;
+			padding-top:3px;
+			padding-bottom:3px;
+			padding-left:1px;
+			line-height:10px;
+			text-transform:lowercase;
+			background-color: #f7f7f7;
+			border-left:2px solid {color:border};
+		}
+
+		#info a {
+			text-align:center;
+			padding:3px;
+			color:{color:Post Links};
+		}
+
+		#info a:hover {
+			-moz-transition-duration:0.3s;
+			-webkit-transition-duration:0.3s;
+			-o-transition-duration:0.3s;
+			color:{color:Hover}
+		}
+
+
+
+		#tags {
+			float:left;
+			width:489px;
+			margin-top:10px;
+			margin-left:-5px;
+			text-align:right;
+			font-size:15px;
+			padding-right:5px;
+			padding-left:5px;
+			padding-top:3px;
+			padding-bottom:5px;
+			font-size:8px;
+			opacity:1;
+			transition-duration: 0.5s;
+			-moz-transition-duration: 0.5s;
+			-webkit-transition-duration: 0.5s;
+			-o-transition-duration: 0.5s
+			color:{color:Post Links};
+		}
+
+		#tags a {
+			letter-spacing:0px;
+			font-size:12px;
+			text-align:center;
+			font-family:'Roboto';
+			text-decoration:none;
+			display:inline-block;
+			color:#ddd;
+		}
+
+		#tags a:hover {
+			background-color:#fff;
+			-moz-transition-duration:0.3s;
+			-webkit-transition-duration:0.3s;
+			-o-transition-duration:0.3s;
+			color:{color:Hover};
+		}
+
+		/*QUESTION*/
+
+		#asker {
+			color:{color:text};
+			padding-top:7px;
+			padding-bottom:7px;
+			padding-left:23px;
+			padding-right:5px;
+			font-family:'Roboto';
+			font-size:11px;
+			letter-spacing:0px;
+			text-align:left;
+			margin-top:0px;
+			text-transform:lowercase;
+			line-height:100%;
+			background-color:#f7f7f7;
+		}
+
+		#peep {
+			font-family: 'Roboto';
+			margin-left:-10px;
+			margin-bottom:3px;
+			color: {color:text};
+			text-align:left;
+		}
+
+		#peep a {
+			color: {color:text};
+		}
+
+		#peep a:hover {
+			color: {color:hover};
+			-moz-transition-duration:0.3s;
+			-webkit-transition-duration:0.3s;
+			-o-transition-duration:0.3s;
+		}
+
+		/*CREDIT*/
+
+		#cred {
+			position:fixed;
+			font-family:'Roboto';
+			font-size:10px;
+			right:10px;
+			bottom:10px;
+			padding:10px;
+			letter-spacing:1px;
+		}
+
+		/*.nav {*/
+			/*    margin-top: -5px;*/
+			/*    height: 50px;*/
+			/*    width: 2000px;*/
+			/*    font-size: 16px;*/
+			/*    color: #ece6ec;*/
+			/*    background-color: #400040;*/
+			/*    padding-top: 10px;*/
+			/*    overflow: hidden;*/
+			/*    position: fixed;*/
+			/*    z-index: 1;*/
+			/*    box-shadow: 0px 3px 5px #888888;*/
+			/*}*/
+
+			.items {
+				display: inline;
+				/*border: 1px solid #ece6ec;*/
+				/*border-radius: 6px;*/
+				padding-top: 4px;
+				padding-bottom: 4px;
+				padding-left: 8px;
+				padding-right: 8px;
+				margin-left: 20px  
+			}
+
+			#current {
+				background-color: #ece6ec;
+				color: #400040;
+				border-color: #400040;
+				opacity: 0.9
+			}
+
+			.nav a {
+				text-decoration: none;
+				color: #ece6ec        
+			}
+
+	 	{CustomCSS}
+	 </style>
+</head>
+
+<body>
+	<div class="navbar-fixed">
+		<nav id="nav_f" class="default_color" role="navigation">
+			<div class="container">
+				<div class="nav-wrapper">
+					<a id="logo-container" class="brand-logo button" href="http://www.arjunkalburgi.com">Arjun Kalburgi</a>
+					<ul id="nav-mobile" class="right">
+						<li class=""><a class="button" href="http://www.arjunkalburgi.com/#intro">About</a></li>
+						<li class=""><a class="button" href="http://www.arjunkalburgi.com/projects.html">Projects</a></li>
+						<li class=""><a class="button" href="http://www.arjunkalburgi.com/more.html">More</a></li>
+						<li ><a class="button" href="http://www.arjunkalburgi.com/#contact">Contact</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div id="main">
+		<div class="container intro">
+			<div class="row">
+				<div  class="col s12">
+					<h4 style="font-weight: 100"> Welcome <br> </h4>
+					<h4 class="center header text_h2"> 
+						to the homepage of my blogs and Internet presence! Below are links to each of my four life blogs which are all about what I do and how I do it. You can also find links to my social media accounts. 
+					</h4>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Traveler -->
+				<div class="col s12 m3">
+					<div class="card card-avatar"><a href="http://blog.arjunkalburgi.com/tagged/travel">
+						<div class="waves-effect waves-block waves-light" style="font-size:8.27rem; color:#007E60">
+							<i class="mdi-maps-map"></i>
+						</div>
+						<div class="card-content">
+							<span class="card-title grey-text text-darken-4">Traveler <br/><br/>
+								<small><em class="more-card-subtitle">Lessons by Environment</em></small>
+							</span>
+						</div></a>
+					</div>
+				</div>
+				<!-- Creator -->
+				<div class="col s12 m3">
+					<div class="card card-avatar"><a href="http://blog.arjunkalburgi.com/tagged/create">
+						<div class="waves-effect waves-block waves-light" style="font-size:8.27rem; color:#007E60">
+							<i class="mdi-image-wb-incandescent"></i>
+						</div>
+						<div class="card-content">
+							<span class="card-title grey-text text-darken-4">Creator<br/><br/>
+								<small><em class="more-card-subtitle">Expression by Creation</em></small>
+							</span>
+						</div></a>
+					</div>
+				</div>
+				<!-- Athlete -->
+				<div class="col s12 m3">
+					<div class="card card-avatar"><a href="http://blog.arjunkalburgi.com/tagged/fitness">
+						<div class="waves-effect waves-block waves-light" style="font-size:8.27rem; color:#007E60">
+							<i class="mdi-maps-directions-walk	"></i>
+						</div>
+						<div class="card-content">
+							<span class="card-title grey-text text-darken-4">Athlete<br/><br/>
+								<small><em class="more-card-subtitle">Fitness by Progression</em></small>
+							</span>
+						</div></a>
+					</div>
+				</div>
+				<!-- Volunteer -->
+				<div class="col s12 m3">
+					<div class="card card-avatar"><a href="http://blog.arjunkalburgi.com/tagged/volunteer">
+						<div class="waves-effect waves-block waves-light" style="font-size:8.27rem; color:#007E60">
+							<i class="mdi-social-people"></i>
+						</div>
+						<div class="card-content">
+							<span class="card-title grey-text text-darken-4">Volunteer<br/><br/>
+								<small><em class="more-card-subtitle">Leadership by Service</em></small>
+							</span>
+						</div></a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m3">
+					<div class="card card-avatar"><a href="">
+						<div class="waves-effect waves-block waves-light" style="font-size:8.27rem; color:#007E60">
+							<i class="fa fa-google-plus-square"></i>
+						</div>
+						<div class="card-content">
+							<span class="card-title grey-text text-darken-4">Google+<br/><br/>
+							</span>
+						</div>
+					</a></div>
+				</div>
+				<div class="col s12 m3">
+					<div class="card card-avatar"><a href="">
+						<div class="waves-effect waves-block waves-light" style="font-size:8.27rem; color:#007E60">
+							<i class="fa fa-github-square"></i>
+						</div>
+						<div class="card-content">
+							<span class="card-title grey-text text-darken-4">Github<br/><br/>
+							</span>
+						</div>
+					</a></div>
+				</div>
+				<div class="col s12 m3">
+					<div class="card card-avatar"><a href="">
+						<div class="waves-effect waves-block waves-light" style="font-size:8.27rem; color:#007E60">
+							<i class="fa fa-twitter-square"></i>
+						</div>
+						<div class="card-content">
+							<span class="card-title grey-text text-darken-4">Twitter<br/><br/>
+							</span>
+						</div>
+					</a></div>
+				</div>
+				<div class="col s12 m3">
+					<div class="card card-avatar"><a href="">
+						<div class="waves-effect waves-block waves-light" style="font-size:8.27rem; color:#007E60">
+							<i class="fa fa-linkedin-square"></i>
+						</div>
+						<div class="card-content">
+							<span class="card-title grey-text text-darken-4">LinkedIn<br/><br/>
+							</span>
+						</div>
+					</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="sidebar">
+		<div class="links">
+			<h1 style="font-size:20px; text-align: center">
+				<p style="font-family: Roboto; font-size: 25px">BLOG</p>
+			</h1>
+
+			<a href="/ask" style="font-size:13px;">ask</a>
+			<p>_______________________</p>
+			<p style="font-size:15px">ARJUN KALBURGI</p>
+			<p> * * * </p>
+			<p><em style="font-size: 13px; color: black; line-height:1">Traveler</em></br>
+				<em style="font-size: 13px; color: black; line-height:1">Creator</em></br>
+				<em style="font-size: 13px; color: black; line-height:1">Athelte</em></br>
+				<em style="font-size: 13px; color: black; line-height:1">Volunteer</em>
+			</p>
+			<p>_______________________</p>
+			<a href="http://blog.arjunkalburgi.com/tagged/travel"><i class="small mdi-maps-map" style="color:#007E60"></i></a>
+			<a href="http://blog.arjunkalburgi.com/tagged/create"><i class="small mdi-image-wb-incandescent" style="color:#007E60"></i></a>
+			<a href="http://blog.arjunkalburgi.com/tagged/fitness"><i class="small mdi-maps-directions-walk" style="color:#007E60"></i></a>
+			<a href="http://blog.arjunkalburgi.com/tagged/volunteer"><i class="small mdi-social-people" style="color:#007E60"></i></a>
+			{block:IfShowLink1}<a href="{text:Link 1}">{text:Link 1 Text}</a>{/block:IfShowLink1}
+			{block:IfShowLink2}<a href="{text:Link 2}">{text:Link 2 Text}</a>{/block:IfShowLink2}
+			{block:IfShowLink3}<a href="{text:Link 3}">{text:Link 3 Text}</a>{/block:IfShowLink3}
+
+			<div id="description" style="font-size:12px">{Description}
+
+				{block:Pagination}
+				<div id="pagination">
+					{block:PreviousPage}<a href="{PreviousPage}" style="font-size:12px"><strong style="color:black">prev page</strong></a>{/block:PreviousPage}
+					|
+					{block:NextPage}<a href="{NextPage}" style="font-size: 12px"><strong style="color:black">next page</strong></a>{/block:NextPage}
+				</div>
+				{/block:Pagination}
+			</div>
+		</div>
+	</div>
+
+ 	<div id="entries" class="normal">
+ 		<div id="post" class="map">
+ 			Hover over the marker to see when I visited the place!
+ 			The markers don't include layovers for flights or roadstops for roadtrips!
+ 			<br/>
+ 			<div id="map-canvas" style="height: 241px;"></div>
+ 		</div>
+
+		{block:Posts}
+			<div id="post">
+
+				{block:Text}
+				<h1><a href="{Permalink}">{block:Title}{Title}{/block:Title}</a></h1>
+				{Body}
+				{/block:Text}
+
+				{block:Photo}
+					{LinkOpenTag}<img src="{PhotoURL-500}">{LinkCloseTag}
+					{block:Caption}{Caption}{/block:Caption}
+				{/block:Photo}
+
+				{block:Photoset}{Photoset-500}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}
+
+				{block:Quote}
+					<h2>"{Quote}"</h2>
+					{block:Source}<div class="qsource"> —{Source}</div>{/block:Source}
+				{/block:Quote}
+
+				{block:Link}<h1><a href="{URL}" {Target}>{Name}</a></h1>{block:Description}{Description}{/block:Description}{/block:Link}
+
+				{block:Chat}{block:Title}{Title}{/block:Title}{block:Lines}{block:Label}<b><u>{Label}</u></b>{/block:Label} {Line}<br>{/block:Lines}{/block:Chat}
+
+				{block:Audio}
+					<left>
+						{block:AlbumArt}<img src="{AlbumArtURL}" width="60px" height="60px" align="left" style="margin-right:10px" />{/block:AlbumArt}
+						<span class="audio">
+						{AudioPlayerBlack}
+						</span>
+					</left>
+					{block:TrackName}<b>Title:</b> {TrackName}<br />{/block:TrackName}
+					{block:Artist}<b>Artist:</b> {Artist}<br />{/block:Artist}
+					{/block:ExternalAudio}<b>Played:</b> {PlayCount} times <br>
+				{/block:Audio}
+
+				{block:Video}{Video-500}{block:Caption}{Caption}{/block:Caption}{/block:Video}
+
+				{block:Answer}
+					<div id="asker">
+						<div id="peep"><b><i>{Asker} yelled</i></b>:</div>
+						{Question}
+						<span style="text-align:lowercase; color:{color:text};font-style:italic; "><br></span>
+					</div>
+					<left><div style="padding:4px;margin-top:3px;font-size:11px;"><font face="calibri">{Answer}</font></div></left>
+				{/block:Answer}
+
+				<div id="info">
+					<a href="{Permalink}">{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</a>  
+
+					{block:HasTags}<div id="tags">{block:Tags}<a href="/tagged/{Tag}">#{Tag}</a>&nbsp;{/block:Tags}</div>{block:HasTags}
+				</div>
+			</div>
+		{/block:Posts}
+		<br><br>{block:PostNotes}<div id="notes"><left>{PostNotes}</div>{/block:PostNotes}
+ 	</div> <!-- end normal -->
+
+<!--<div id="cred">
+<a href="http://jcwaylnd.tumblr.com/">JCW</a>    
+</div>-->
+<!-- </div> -->
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<!--Google Map-->
+<script type="text/javascript">
+	$(function() {
+		var url = document.URL;
+		console.log(url);
+		console.log(url == "http://blog.arjunkalburgi.com/")
+		if (url.indexOf("travel") == -1) { 
+			$('<style>.map { display:none; } </style>').appendTo('body');
+		}
+		if (url == "http://blog.arjunkalburgi.com/") {
+                $('<style>#sidebar, #entries { display:none; } </style>').appendTo('body'); // show main
+            } else {
+                $('<style>#main { display:none; }</style>').appendTo('body'); // show posts
+            }
+        });
+    </script>
+    <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsQPYuRrSrIChJFWaVZ-0CxCdBx_UJPlk">
+</script>
+<script type="text/javascript">
+	function initialize() {
+		var mapOptions = {
+			center: { lat: 40.405622, lng: -10.636029},
+			zoom: 1
+		};
+		var map = new google.maps.Map(document.getElementById('map-canvas'),
+			mapOptions);
+
+			// CA
+			var homemarker = new google.maps.Marker({
+				position: new google.maps.LatLng(50.405622, -104.636029),
+				map: map,
+				title:"Born and Raised!"
+			});
+			var schoolmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(53.5333, -113.5000),
+				map: map,
+				title:"Current place of residence!"
+			});
+			var torontomarker = new google.maps.Marker({
+				position: new google.maps.LatLng(43.7, -79.4),
+				map: map,
+				title:"Summer 1995, Winter 1999/00, Summer 2008, Spring 2013, Summer 2014"
+			});
+			var quebecmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(46.8167, -71.2167),
+				map: map,
+				title:"Spring 2008"
+			});
+			var banffmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(51.1781, -115.5719),
+				map: map,
+				title:"Summer 2002"
+			});
+			var canmoremarker = new google.maps.Marker({
+				position: new google.maps.LatLng(51.093085, -115.358496), 
+				map: map, 
+				title:"Summer 2015"
+			})
+			var calgarymarker = new google.maps.Marker({
+				position: new google.maps.LatLng(51.0500, -114.0667),
+				map: map,
+				title:"Spring 2001"
+			});
+			var saskatoonmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(52.1333, -106.6833),
+				map: map,
+				title:"Fall 2001, Spring 2007"
+			});
+			var niagramarker = new google.maps.Marker({
+				position: new google.maps.LatLng(43.08, -79.0710),
+				map: map,
+				title:"Summer 2009"
+			});
+			var winnipegmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(49.8994, -97.1392),
+				map: map,
+				title:"Spring 1995"
+			});
+			var nakiskamarker = new google.maps.Marker({
+				position: new google.maps.LatLng(50.9440, -115.1470),
+				map: map,
+				title:"Winter 2012/13"
+			});
+			
+			// India
+			var hydrabadmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(17.3660, 78.4760),
+				map: map,
+				title:'Winter 1996, Fall/Winter 2003/04, Fall/Winter 2006/07, Summer 2013'
+			});
+			var agramarker = new google.maps.Marker({
+				position: new google.maps.LatLng(27.18, 78.02),
+				map: map,
+				title:'Summer 2013'
+			});
+			var jaipurmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(26.926, 75.8235),
+				map: map,
+				title:'Summer 2013'
+			});
+			var delhimarker = new google.maps.Marker({
+				position: new google.maps.LatLng(28.6139, 77.2089),
+				map: map,
+				title:'Winter 1996/97, Summer 2013'
+			});
+			var bengalurumarker = new google.maps.Marker({
+				position: new google.maps.LatLng(12.9667, 77.5667),
+				map: map,
+				title:'Winter 1996/97, Winter 2003/04'
+			});
+			var mumbaimarker = new google.maps.Marker({
+				position: new google.maps.LatLng(18.975, 72.8258),
+				map: map,
+				title:'Winter 2006/07'
+			});
+			var tiripatimarker = new google.maps.Marker({
+				position: new google.maps.LatLng(13.65, 79.42),
+				map: map,
+				title:'Winter 2003/04'
+			});
+
+			//US
+			var dallasmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(32.7758, -96.7967),
+				map: map,
+				title:'Fall 1999, Fall 2001, Fall 2004, Winter 2007/08, Winter 2009/10, Summer 2011'
+			});
+			var austinmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(30.25, -97.75),
+				map: map,
+				title:"Fall 2001"
+			});
+			var houstonmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(29.7628, -95.3831),
+				map: map,
+				title:"Fall 2001"
+			});
+			var midlandmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(32, -102.1),
+				map: map,
+				title:"Winter 1997/98"
+			});
+			var allenmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(33.0997, -96.6631),
+				map: map,
+				title:"Winter 2009/10, Summer 2011"
+			});
+			
+			var SFmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(37.7833, -122.4167),
+				map: map,
+				title:"Winter 2008/09, Summer 2012"
+			});
+			var fremontmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(37.5483, -121.9886),
+				map: map,
+				title:"Winter 2008/09, Summer 2012"
+			});
+			var lamarker = new google.maps.Marker({
+				position: new google.maps.LatLng(34.05, -118.25),
+				map: map,
+				title:"Winter 2008/09"
+			});
+			
+			var detroitmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(42.3086, -83.4822),
+				map: map,
+				title:"Summer 1995, Winter 2009/10"
+			});
+			var saltlakemarker = new google.maps.Marker({
+				position: new google.maps.LatLng(40.75, -111.8833),
+				map: map,
+				title:"Spring 1999, Winter 2008/09"
+			});
+			var bensalemmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(40.11, -74.9433),
+				map: map,
+				title:"Winter 1999/00"
+			});
+
+			//UK
+			var bristolmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(51.45, -2.5833),
+				map: map,
+				title:"Summer 2010, Summer 2014"
+			});
+			var londonmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(51.5072, -0.1275),
+				map: map,
+				title:"August 2003, Summer 2010"
+			});
+			var bathmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(51.38, -2.3600),
+				map: map,
+				title:"Summer 2010, Summer 2014"
+			});
+			var stonehengemarker = new google.maps.Marker({
+				position: new google.maps.LatLng(51.1788, -1.8262),
+				map: map,
+				title:"Summer 2014"
+			});
+			var stratfordavonmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(52.19, -1.7100),
+				map: map,
+				title:"Summer 2010"
+			});
+			var lancastermarker = new google.maps.Marker({
+				position: new google.maps.LatLng(54.0470, -2.8010),
+				map: map,
+				title:"Summer 2003"
+			});
+			
+			// Europe
+			var parismarker = new google.maps.Marker({
+				position: new google.maps.LatLng(48.8567, 2.3508),
+				map: map,
+				title:'Summer 2010, Spring 2012, Summer 2014'
+			});
+			var biaritzmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(43.48, -1.56),
+				map: map,
+				title:'Spring 2012'
+			});
+			var bordeauxmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(44.83, -0.56),
+				map: map, 
+				title:'Spring 2012'
+			});
+			var sansebmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(43.319879, -1.979886), 
+				map: map, 
+				title: 'Spring 2012'
+			});
+			var arlesmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(43.677681, 4.630979), 
+				map: map, 
+				title: 'Spring 2012'
+			}); 
+			var monacomarker = new google.maps.Marker({
+				position: new google.maps.LatLng(43.732946, 7.422933), 
+				map: map, 
+				title: 'Spring 2012'
+			})
+			var nicemarker = new google.maps.Marker({
+				position: new google.maps.LatLng(43.7034, 7.2663),
+				map: map,
+				title:'Spring 2012'
+			});
+			var brusselsmarker = new google.maps.Marker({
+				position: new google.maps.LatLng(50.85, 4.35),
+				map: map,
+				title:'Summer 2014'
+			});
+			var venicemarker = new google.maps.Marker({
+				position: new google.maps.LatLng(45.4375, 12.3358),
+				map: map,
+				title:'Summer 2014'
+			});
+			var pisamarker = new google.maps.Marker({
+				position: new google.maps.LatLng(43.7167, 10.4),
+				map: map,
+				title:'Summer 2014'
+			});
+			var florencemarker = new google.maps.Marker({
+				position: new google.maps.LatLng(43.7833, 11.25),
+				map: map,
+				title:'Summer 2014'
+			});
+			var genevamarker = new google.maps.Marker({
+				position: new google.maps.LatLng(46.2, 6.15),
+				map: map,
+				title:'Summer 2014'
+			});
+			var titlismarker = new google.maps.Marker({
+				position: new google.maps.LatLng(46.7725, 8.4372),
+				map: map,
+				title:'Summer 2014'
+			});
+			
+			// google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+			// 	google.maps.event.clearListeners(blogTab, 'click');
+			// });
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+
+
+
+</body></html>
