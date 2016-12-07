@@ -45,6 +45,7 @@
 		<meta name="if:Show Link 1" content="1" />
 		<meta name="if:Show Link 2" content="1" />
 		<meta name="if:Show Link 3" content="1" />
+		<meta name="if:Enable endless scrolling" content="1">
 
 		<style type="text/css">
 			.tiles article:nth-child(1) .image:before {
@@ -191,11 +192,7 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="https://html5up.net/uploads/demos/phantom/assets/js/jquery.min.js"></script>
-			<script src="https://html5up.net/uploads/demos/phantom/assets/js/skel.min.js"></script>
-			<script src="https://html5up.net/uploads/demos/phantom/assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="https://html5up.net/uploads/demos/phantom/assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 
 			<script type="text/javascript">
 				$(function() {
@@ -211,6 +208,11 @@
 				    }
 				});
 			</script>
+
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/skel.min.js"></script>
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/main.js"></script>
 
 			<!--Google Map-->
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsQPYuRrSrIChJFWaVZ-0CxCdBx_UJPlk"></script>
@@ -483,6 +485,10 @@
 				google.maps.event.addDomListener(window, 'load', initialize);
 			</script>
 
+			<!-- Endless scrolling -->
+			{block:IfEnableEndlessScrolling}
+			<script type="text/javascript" src="http://static.tumblr.com/0szq8b5/R0cmg0bw1/tumblr-endless-scrolling.js"></script>
+			{/block:IfEnableEndlessScrolling}
 
 
 	</body>
