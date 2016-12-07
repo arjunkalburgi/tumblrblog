@@ -164,37 +164,34 @@
 					</footer>
 
 				<!-- Blog page - needs to be changed -->
-					<div id="post" class="" style="width:100%; color: #007e60 !important;padding:0 2.5em;">
+					<div id="post" class="" style="color: #007e60 !important;padding:0 2.5em;">
 				        {block:Posts}
-					    <div class="panel" style="width:100%">
-					        <div class="content" style="width:100%">
-					            <div class="fixed">
-					                <span class="small">{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</span>
-									<h1>{Title}</h1>
-									{block:HasTags}
-									    <span class="excerpt1">
-									    {block:Tags}#{Tag}</br>{/block:Tags}
-							            </span>
-							        {block:HasTags}
-							        {block:Text}
-				    				    {Body}
-				    				{/block:Text}
-				    				
-				    				</br></br>
-				    				{block:NextPost}<a href="{NextPost}">See the next post on blog.arjunkalburgi.com</a>{/block:NextPost}
-				    					
-				                    {block:PermalinkPagination}
-				                        {block:PreviousPost}
-				                            <a style="float:left;color:#007e60;" href="{PreviousPost}"><-- Previous</a>
-				                        {/block:PreviousPost}
-				                        {block:NextPost}
-				                            <a style="float:right;color:#007e60;" href="{NextPost}">Next --><a/>
-				                        {/block:NextPost}
-				                    {/block:PermalinkPagination}
-				                    </br></br>
-					            </div>
-					        </div>
-					    </div>
+				        <div class="content">
+				            <div class="fixed">
+				                <span class="small">{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</span>
+								<h1>{Title}</h1>
+						        {block:Text}
+			    				    {Body}
+			    				{/block:Text}
+
+								{block:HasTags}
+								    <span class="excerpt1">
+								    {block:Tags}#{Tag}</br>{/block:Tags}
+						            </span>
+						        {block:HasTags}
+				            </div>
+				            
+			    					
+		                    {block:PermalinkPagination}
+		                        {block:PreviousPost}
+		                            <a style="float:left;color:#007e60;" href="{PreviousPost}"><-- Previous</a>
+		                        {/block:PreviousPost}
+		                        {block:NextPost}
+		                            <a style="float:right;color:#007e60;" href="{NextPost}">Next --><a/>
+		                        {/block:NextPost}
+		                    {/block:PermalinkPagination}
+		                    </br></br>
+				        </div>
 				        {/block:Posts}
 					</div>
 			</div>

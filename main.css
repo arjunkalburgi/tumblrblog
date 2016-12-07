@@ -187,6 +187,11 @@
 
 		}
 
+#post .content {
+	width: 70%; 
+	margin: auto;
+}
+
 
 /* Reset */
 
