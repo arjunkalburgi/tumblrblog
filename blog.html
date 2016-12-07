@@ -3,514 +3,607 @@
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-
-	MODIFIED BY ARJUN KALBURGI
 -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-	<title>{Title}</title>
-	<link rel="shortcut icon" href="{Favicon}">
-	<link rel="alternate" type="application/rss+xml" href="{RSS}">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="https://cdn.rawgit.com/askalburgi/tumblrblog/master/main.css" />
-
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.css">
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
-
-
-	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
-
-	<meta name="color:Background" content="#ffffff"/>
-	<meta name="color:Text" content="#a8a8a8"/>
-	<meta name="color:selection" content="#a8a8a8"/>
-	<meta name="color:Sidebar Links" content="#b8b8b8"/>
-	<meta name="color:DescriptionText" content="#b8b8b8"/>
-	<meta name="color:Border" content="#dddddd"/>
-	<meta name="color:Hover" content="#f2f2f2"/>
-	<meta name="color:Scrollbar" content=""/>
-	<meta name="color:ScrollbarBg" content=""/>
-	<meta name="color:Post Links" content="#c0bfbf"/>
-	<meta name="color:Answer Backg" content="#000000"/>
-	<meta name="color:italic" content="#a8a8a8"/>
-	<meta name="color:bold" content="#a8a8a8"/>
-	<meta name="image:Sidebar" content=""/>
-	<meta name="image:Background" content=""/>
-	<meta name="text:Link 1" content="" />
-	<meta name="text:Link 1 Text" content="" />
-	<meta name="text:Link 2" content="" />
-	<meta name="text:Link 2 Text" content="" />
-	<meta name="text:Link 3" content="" />
-	<meta name="text:Link 3 Text" content="" />
-	<meta name="if:Show Link 1" content="1" />
-	<meta name="if:Show Link 2" content="1" />
-	<meta name="if:Show Link 3" content="1" />
-
-
-	<style type="text/css">
-		#nav_f{
-			box-shadow: none !important; 
-			-webkit-box-shadow:none !important;
-		}
-		.default_color{background-color: #007E60/*084D3F,2196F3*/;}
-
-		.default_color_text{color: #007E60/*084D3F,2196F3*/ !important}
-
-		.icon-block {
-			padding: 0 15px;
-		}
-
-		.brand-logo{
-			position: absolute;
-			color: #fff;
-			display: inline-block;
-			font-size: 2.1rem;
-			font-style: normal;
-			font-weight: 100;
-			padding: 0;
-			letter-spacing: 7px;
-		}
-
-
-		.tiles article.tile > .image:nth-child(1):before {
-            background: #e8846b; 
-            animation-delay: 250ms;
-        }
-        .tiles article.tile > .image:nth-child(2):before {
-            background: #16528e; 
-            animation-delay: 500ms;
-        }
-        .tiles article.tile > .image:nth-child(3):before {
-            background: #e54b4b; 
-            animation-delay: 750ms;
-        }
-        .tiles article.tile > .image:nth-child(4):before {
-            background: #a2c5bf; 
-            animation-delay: 1000ms;
-        }
-        .tiles article.tile > .image:nth-child(5):before {
-            background: #167c80; 
-            animation-delay: 1250ms;
-        }
-        .tiles article.tile > .image:nth-child(6):before {
-            background: #0082c8; 
-            animation-delay: 1500ms;
-        }
-        .tiles article.tile > .image:nth-child(7):before {
-            background: #72616e; 
-            animation-delay: 1750ms;
-        }
-        .tiles article.tile > .image:nth-child(8):before {
-            background: #e8846b; 
-            animation-delay: 2000ms;
-        }
-        .tiles article.tile > .image:nth-child(9):before {
-            background: #16528e; 
-            animation-delay: 2250ms;
-        }
-        .tiles article.tile > .image:nth-child(10):before {
-            background: #e54b4b; 
-            animation-delay: 2500ms;
-        }
-        .tiles article.tile > .image:nth-child(11):before {
-            background: #a2c5bf; 
-            animation-delay: 2750ms;
-        }
-        .tiles article.tile > .image:nth-child(12):before {
-            background: #167c80; 
-            animation-delay: 3000ms;
-        }
-        .tiles article.tile > .image:nth-child(13):before {
-            background: #0082c8; 
-            animation-delay: 3250ms;
-        }
-        .tiles article.tile > .image:nth-child(14):before {
-            background: #72616e; 
-            animation-delay: 3500ms;
-        }
-        .tiles article.tile > .image:nth-child(15):before {
-            background: #e8846b; 
-            animation-delay: 3750ms;
-        }
-        .tiles article.tile > .image:last-child :before{
-            background: #222222; 
-            animation-delay: 4000ms;
-        }
-
-
-	 	{CustomCSS}
-	 </style>
-</head>
-
-<body>
-	<header id="header" class="header">
-		<nav class="top-nav">
-			<a href="http://blog.arjunkalburgi.com" class="logo"></a>
-			<div class="links">
-				<a href="http://arjunkalburgi.com/index.html#bottom"><span>Home</span><span>Home</span></a>			</div><div class="links">
-				<a href="http://arjunkalburgi.com/projects.html"><span>Projects</span><span>Projects</span></a>			</div>
-		</nav>
-	</header>
-
-	<div id="main">
-		<!-- Tiles -->
-		<div class="inner">
-			<section class="tiles">
-        		{block:Posts}
-					<article class="tile">
-						<span class="image">
-							<img src="https://html5up.net/uploads/demos/phantom/images/pic01.jpg" alt="" />
-						</span>
-						<a href="{Permalink}">
-							<h2>{Title}</h2>
-							<div class="content">
-								<p>{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</p>
-							</div>
-						</a>
-					</article>
-        		{/block:Posts}
-			</section>
-		</div>
-
-		<!-- Page buttons -->
-		<div>Next Page Stuff</div>
-
-		<!-- Map -->
-		<header class="map">
-			<h2>Where I've been</h2>
-			<p>Hover over the marker to see when I visited the place!
-			The markers don't include layovers for flights or roadstops for roadtrips!</p>
-
-			<br/>
-			<div id="map-canvas" style="height: 241px;"></div>
-		</header>
-	</div>
-
-
-	<!-- Blog page - needs to be changed -->
-	<div id="post" class="panels" style="width:100%; color: #007e60 !important;">
-        {block:Posts}
-	    <div class="panel" style="width:100%">
-	        <div class="content" style="width:100%">
-	            <div class="fixed">
-	                <span class="small">{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</span>
-					<h1>{Title}</h1>
-					{block:HasTags}
-					    <span class="excerpt1">
-					    {block:Tags}#{Tag}</br>{/block:Tags}
-			            </span>
-			        {block:HasTags}
-			        {block:Text}
-    				    {Body}
-    				{/block:Text}
-    				
-    				</br></br>
-    				{block:NextPost}<a href="{NextPost}">See the next post on blog.arjunkalburgi.com</a>{/block:NextPost}
-    					
-                    {block:PermalinkPagination}
-                        {block:PreviousPost}
-                            <a style="float:left;color:#007e60;" href="{PreviousPost}"><-- Previous</a>
-                        {/block:PreviousPost}
-                        {block:NextPost}
-                            <a style="float:right;color:#007e60;" href="{NextPost}">Next --><a/>
-                        {/block:NextPost}
-                    {/block:PermalinkPagination}
-                    </br></br>
-	            </div>
-	        </div>
-	    </div>
-        {/block:Posts}
-	</div>
-
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
-	<script type="text/javascript">
-		$(function() {
-			var url = document.URL;
-			console.log(url);
-			console.log(url == "http://blog.arjunkalburgi.com/")
-		    if (url.includes("post")) { 
-		            $('<style>#main { display:none; } </style>').appendTo('body'); // show main
-					$('<style>.map { display:none; } </style>').appendTo('body');
-		    } else {
-		        $('<style>#post { display:none; }</style>').appendTo('body'); // show posts
-		    }
-		});
-	</script>
-
-	<!--Google Map-->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsQPYuRrSrIChJFWaVZ-0CxCdBx_UJPlk"></script>
-
-	<script type="text/javascript">
-	function initialize() {
-		var mapOptions = {
-			center: { lat: 40.405622, lng: -10.636029},
-			zoom: 1
-		};
-		var map = new google.maps.Map(document.getElementById('map-canvas'),
-			mapOptions);
-
-			// CA
-			var homemarker = new google.maps.Marker({
-				position: new google.maps.LatLng(50.405622, -104.636029),
-				map: map,
-				title:"Born and Raised!"
-			});
-			var schoolmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(53.5333, -113.5000),
-				map: map,
-				title:"Current place of residence!"
-			});
-			var torontomarker = new google.maps.Marker({
-				position: new google.maps.LatLng(43.7, -79.4),
-				map: map,
-				title:"Summer 1995, Winter 1999/00, Summer 2008, Spring 2013, Summer 2014"
-			});
-			var quebecmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(46.8167, -71.2167),
-				map: map,
-				title:"Spring 2008"
-			});
-			var banffmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(51.1781, -115.5719),
-				map: map,
-				title:"Summer 2002"
-			});
-			var canmoremarker = new google.maps.Marker({
-				position: new google.maps.LatLng(51.093085, -115.358496), 
-				map: map, 
-				title:"Summer 2015"
-			})
-			var calgarymarker = new google.maps.Marker({
-				position: new google.maps.LatLng(51.0500, -114.0667),
-				map: map,
-				title:"Spring 2001"
-			});
-			var saskatoonmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(52.1333, -106.6833),
-				map: map,
-				title:"Fall 2001, Spring 2007"
-			});
-			var niagramarker = new google.maps.Marker({
-				position: new google.maps.LatLng(43.08, -79.0710),
-				map: map,
-				title:"Summer 2009"
-			});
-			var winnipegmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(49.8994, -97.1392),
-				map: map,
-				title:"Spring 1995"
-			});
-			var nakiskamarker = new google.maps.Marker({
-				position: new google.maps.LatLng(50.9440, -115.1470),
-				map: map,
-				title:"Winter 2012/13"
-			});
-			
-			// India
-			var hydrabadmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(17.3660, 78.4760),
-				map: map,
-				title:'Winter 1996, Fall/Winter 2003/04, Fall/Winter 2006/07, Summer 2013'
-			});
-			var agramarker = new google.maps.Marker({
-				position: new google.maps.LatLng(27.18, 78.02),
-				map: map,
-				title:'Summer 2013'
-			});
-			var jaipurmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(26.926, 75.8235),
-				map: map,
-				title:'Summer 2013'
-			});
-			var delhimarker = new google.maps.Marker({
-				position: new google.maps.LatLng(28.6139, 77.2089),
-				map: map,
-				title:'Winter 1996/97, Summer 2013'
-			});
-			var bengalurumarker = new google.maps.Marker({
-				position: new google.maps.LatLng(12.9667, 77.5667),
-				map: map,
-				title:'Winter 1996/97, Winter 2003/04'
-			});
-			var mumbaimarker = new google.maps.Marker({
-				position: new google.maps.LatLng(18.975, 72.8258),
-				map: map,
-				title:'Winter 2006/07'
-			});
-			var tiripatimarker = new google.maps.Marker({
-				position: new google.maps.LatLng(13.65, 79.42),
-				map: map,
-				title:'Winter 2003/04'
-			});
-
-			//US
-			var dallasmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(32.7758, -96.7967),
-				map: map,
-				title:'Fall 1999, Fall 2001, Fall 2004, Winter 2007/08, Winter 2009/10, Summer 2011'
-			});
-			var austinmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(30.25, -97.75),
-				map: map,
-				title:"Fall 2001"
-			});
-			var houstonmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(29.7628, -95.3831),
-				map: map,
-				title:"Fall 2001"
-			});
-			var midlandmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(32, -102.1),
-				map: map,
-				title:"Winter 1997/98"
-			});
-			var allenmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(33.0997, -96.6631),
-				map: map,
-				title:"Winter 2009/10, Summer 2011"
-			});
-			
-			var SFmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(37.7833, -122.4167),
-				map: map,
-				title:"Winter 2008/09, Summer 2012"
-			});
-			var fremontmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(37.5483, -121.9886),
-				map: map,
-				title:"Winter 2008/09, Summer 2012"
-			});
-			var lamarker = new google.maps.Marker({
-				position: new google.maps.LatLng(34.05, -118.25),
-				map: map,
-				title:"Winter 2008/09"
-			});
-			
-			var detroitmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(42.3086, -83.4822),
-				map: map,
-				title:"Summer 1995, Winter 2009/10"
-			});
-			var saltlakemarker = new google.maps.Marker({
-				position: new google.maps.LatLng(40.75, -111.8833),
-				map: map,
-				title:"Spring 1999, Winter 2008/09"
-			});
-			var bensalemmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(40.11, -74.9433),
-				map: map,
-				title:"Winter 1999/00"
-			});
-
-			//UK
-			var bristolmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(51.45, -2.5833),
-				map: map,
-				title:"Summer 2010, Summer 2014"
-			});
-			var londonmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(51.5072, -0.1275),
-				map: map,
-				title:"August 2003, Summer 2010"
-			});
-			var bathmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(51.38, -2.3600),
-				map: map,
-				title:"Summer 2010, Summer 2014"
-			});
-			var stonehengemarker = new google.maps.Marker({
-				position: new google.maps.LatLng(51.1788, -1.8262),
-				map: map,
-				title:"Summer 2014"
-			});
-			var stratfordavonmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(52.19, -1.7100),
-				map: map,
-				title:"Summer 2010"
-			});
-			var lancastermarker = new google.maps.Marker({
-				position: new google.maps.LatLng(54.0470, -2.8010),
-				map: map,
-				title:"Summer 2003"
-			});
-			
-			// Europe
-			var parismarker = new google.maps.Marker({
-				position: new google.maps.LatLng(48.8567, 2.3508),
-				map: map,
-				title:'Summer 2010, Spring 2012, Summer 2014'
-			});
-			var biaritzmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(43.48, -1.56),
-				map: map,
-				title:'Spring 2012'
-			});
-			var bordeauxmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(44.83, -0.56),
-				map: map, 
-				title:'Spring 2012'
-			});
-			var sansebmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(43.319879, -1.979886), 
-				map: map, 
-				title: 'Spring 2012'
-			});
-			var arlesmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(43.677681, 4.630979), 
-				map: map, 
-				title: 'Spring 2012'
-			}); 
-			var monacomarker = new google.maps.Marker({
-				position: new google.maps.LatLng(43.732946, 7.422933), 
-				map: map, 
-				title: 'Spring 2012'
-			})
-			var nicemarker = new google.maps.Marker({
-				position: new google.maps.LatLng(43.7034, 7.2663),
-				map: map,
-				title:'Spring 2012'
-			});
-			var brusselsmarker = new google.maps.Marker({
-				position: new google.maps.LatLng(50.85, 4.35),
-				map: map,
-				title:'Summer 2014'
-			});
-			var venicemarker = new google.maps.Marker({
-				position: new google.maps.LatLng(45.4375, 12.3358),
-				map: map,
-				title:'Summer 2014'
-			});
-			var pisamarker = new google.maps.Marker({
-				position: new google.maps.LatLng(43.7167, 10.4),
-				map: map,
-				title:'Summer 2014'
-			});
-			var florencemarker = new google.maps.Marker({
-				position: new google.maps.LatLng(43.7833, 11.25),
-				map: map,
-				title:'Summer 2014'
-			});
-			var genevamarker = new google.maps.Marker({
-				position: new google.maps.LatLng(46.2, 6.15),
-				map: map,
-				title:'Summer 2014'
-			});
-			var titlismarker = new google.maps.Marker({
-				position: new google.maps.LatLng(46.7725, 8.4372),
-				map: map,
-				title:'Summer 2014'
-			});
-			
-			// google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
-			// 	google.maps.event.clearListeners(blogTab, 'click');
-			// });
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
-	</script>
+<html>
+	<head>
+		<title>{Title}</title>
+		<link rel="shortcut icon" href="{Favicon}">
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="https://html5up.net/uploads/demos/phantom/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
 
 
-</body></html>
+		{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+		<meta name="color:Background" content="#ffffff"/>
+		<meta name="color:Text" content="#a8a8a8"/>
+		<meta name="color:selection" content="#a8a8a8"/>
+		<meta name="color:Sidebar Links" content="#b8b8b8"/>
+		<meta name="color:DescriptionText" content="#b8b8b8"/>
+		<meta name="color:Border" content="#dddddd"/>
+		<meta name="color:Hover" content="#f2f2f2"/>
+		<meta name="color:Scrollbar" content=""/>
+		<meta name="color:ScrollbarBg" content=""/>
+		<meta name="color:Post Links" content="#c0bfbf"/>
+		<meta name="color:Answer Backg" content="#000000"/>
+		<meta name="color:italic" content="#a8a8a8"/>
+		<meta name="color:bold" content="#a8a8a8"/>
+		<meta name="image:Sidebar" content=""/>
+		<meta name="image:Background" content=""/>
+		<meta name="text:Link 1" content="" />
+		<meta name="text:Link 1 Text" content="" />
+		<meta name="text:Link 2" content="" />
+		<meta name="text:Link 2 Text" content="" />
+		<meta name="text:Link 3" content="" />
+		<meta name="text:Link 3 Text" content="" />
+		<meta name="if:Show Link 1" content="1" />
+		<meta name="if:Show Link 2" content="1" />
+		<meta name="if:Show Link 3" content="1" />
+
+		<style type="text/css">
+			.header {
+			    background-color: #007E60 !important; /*#f3f3f3;*/
+			    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .04);
+			    position: fixed;
+			    text-align: center;
+			    -webkit-transition: background-color .3s, height .3s, -webkit-transform .3s;
+			    transition: background-color .3s, height .3s, transform .3s;
+			    width: 100%;
+			    z-index: 3
+			}
+			nav {
+				background-color: #007e60 !important; 
+			}
+			.header,
+			.intro .header {
+			    height: 52px;
+			    overflow: hidden
+			}
+			.top-nav {
+			    font-size: 12px;
+			    font-weight: 600;
+			    height: 52px;
+			    letter-spacing: 2px;
+			    width: 100%;
+			    z-index: 11
+			}
+			.top-nav .links {
+			    display: inline-block;
+			    height: 52px;
+			    line-height: 16px;
+			    margin: 0;
+			    padding: 19px 37px 0 0;
+			    position: relative;
+			    width: 50%;
+			    vertical-align: top;
+			    z-index: 1
+			}
+			.top-nav .links:last-child {
+			    padding-left: 38px;
+			    padding-right: 0
+			}
+			.top-nav .links:last-child a {
+			    float: left;
+			    margin-left: 0;
+			    margin-right: 22px
+			}
+			.top-nav .links a {
+			    display: inline-block;
+			    height: 16px;
+			    overflow: hidden;
+			    position: relative;
+			    text-decoration: none;
+			    border-bottom: 1px solid transparent;
+			    color: white;
+			    float: right;
+			    margin-left: 22px;
+			    text-transform: uppercase;
+			    -webkit-transition: border-bottom 0;
+			    transition: border-bottom 0
+			}
+			.top-nav .links a:hover span {
+			    padding-top: 16px
+			}
+			.top-nav .links a span {
+			    display: block;
+			    height: 16px;
+			    line-height: 16px;
+			    -webkit-transition: padding-top .3s;
+			    transition: padding-top .3s
+			}
+			.top-nav .links a span:first-child {
+			    margin-top: -16px
+			}
+			.top-nav .links a.selected span {
+			    padding-top: 16px
+			}
+			.top-nav .links a.selected {
+			    border-bottom: 1px solid #444;
+			    -webkit-transition: border-bottom .3s;
+			    transition: border-bottom .3s
+			}
+			.top-nav .links a.selected.no-transition,
+			.top-nav .links a.selected.no-transition span {
+			    -webkit-transition: none;
+			    transition: none
+			}
+			.top-nav .links span:first-child {
+			    color: #444
+			}
+			.touch .top-nav .links a:hover span {
+			    padding-top: 0
+			}
+			.touch .top-nav .links a.selected:hover span {
+			    padding-top: 16px
+			}
+			.mm .top-nav .links a.selected {
+			    border-bottom: 1px solid #16528e
+			}
+			.mm .top-nav .links span:first-child {
+			    color: #16528e
+			}
+			.top-nav .logo {
+			    /*border: 3px solid #000;*/
+			    /*color: #000;*/
+			    display: inline-block;
+			    font-family: 'icons';
+			    font-size: 25px;
+			    height: 22px;
+			    left: 50%;
+			    margin: 15px 0 0 -12px;
+			    position: absolute;
+			    text-decoration: none;
+			    top: 0;
+			    -webkit-transform: rotate(0);
+			    transform: rotate(0);
+			    -webkit-transform-origin: 50% 50%;
+			    transform-origin: 50% 50%;
+			    -webkit-transition: border .3s, -webkit-transform .3s ease-out;
+			    transition: border .3s, transform .3s ease-out;
+			    width: 22px;
+			    z-index: 2;
+			    content: url('https://cdn.rawgit.com/askalburgi/askalburgi.github.io/websiteAug2016Curr/img/Logo.png');
+			}
+			/*.top-nav .logo:after {
+			    background: #000;
+			    border-radius: 10px;
+			    content: url(../img/Logo.png);
+			    height: 10px;
+			    left: 3px;
+			    position: absolute;
+			    -webkit-transition: background .3s;
+			    transition: background .3s;
+			    top: 3px;
+			    width: 10px
+			}*/
+			.top-nav .logo:hover,
+			.top-nav .logo.bounce {
+			    -webkit-transform: rotate(360deg);
+			    transform: rotate(360deg)
+			}
+			.mm .top-nav .logo {
+			    border: none;
+			    border-radius: 0;
+			    height: 24px;
+			    margin-top: 13px;
+			    -webkit-transform-origin: 50% 100%;
+			    transform-origin: 50% 100%;
+			    -webkit-transition: color .3s;
+			    transition: color .3s;
+			    width: 24px
+			}
+			.mm .top-nav .logo:after {
+			    background: 0 0;
+			    content: 'm';
+			    left: 0;
+			    position: absolute;
+			    top: 0
+			}
+			.mm .top-nav .logo:hover,
+			.mm .top-nav .logo.bounce {
+			    -webkit-animation: logo-jump .5s 1;
+			    animation: logo-jump .5s 1;
+			    -webkit-transform: none;
+			    transform: none
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header class="header">
+			<nav class="top-nav">
+			    <a href="http://blog.arjunkalburgi.com" class="logo"></a>
+			    <div class="links">
+			        <a href="http://arjunkalburgi.com/index.html#bottom"><span>Home</span><span>Home</span></a>         </div><div class="links">
+			        <a href="http://arjunkalburgi.com/projects.html"><span>Projects</span><span>Projects</span></a>
+			    </div>
+			</nav>
+					
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper" style="padding: 8em 0 0.1em;">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>Insights, Analysis, Random<br />
+								Arjun's World.</h1>
+								<p>Below you'll find thoughts, plans and ideas. Just a place for me to be creative or think out LOUD!</p>
+							</header>
+							<section class="tiles">
+				        		{block:Posts}
+									<article class="tile">
+										<span class="image">
+											<img src="https://html5up.net/uploads/demos/phantom/images/pic01.jpg" alt="" />
+										</span>
+										<a href="{Permalink}">
+											<h2>{Title}</h2>
+											<div class="content">
+												<p>{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</p>
+											</div>
+										</a>
+									</article>
+				        		{/block:Posts}
+							</section>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section class="map">
+								<h2>Where I've been</h2>
+								<p>Hover over the marker to see when I visited the place!
+								The markers don't include layovers for flights or roadstops for roadtrips!</p>
+
+								<br/>
+								<div id="map-canvas" style="height: 241px;"></div>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+				<!-- Blog page - needs to be changed -->
+					<div id="post" class="panels" style="width:100%; color: #007e60 !important;">
+				        {block:Posts}
+					    <div class="panel" style="width:100%">
+					        <div class="content" style="width:100%">
+					            <div class="fixed">
+					                <span class="small">{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</span>
+									<h1>{Title}</h1>
+									{block:HasTags}
+									    <span class="excerpt1">
+									    {block:Tags}#{Tag}</br>{/block:Tags}
+							            </span>
+							        {block:HasTags}
+							        {block:Text}
+				    				    {Body}
+				    				{/block:Text}
+				    				
+				    				</br></br>
+				    				{block:NextPost}<a href="{NextPost}">See the next post on blog.arjunkalburgi.com</a>{/block:NextPost}
+				    					
+				                    {block:PermalinkPagination}
+				                        {block:PreviousPost}
+				                            <a style="float:left;color:#007e60;" href="{PreviousPost}"><-- Previous</a>
+				                        {/block:PreviousPost}
+				                        {block:NextPost}
+				                            <a style="float:right;color:#007e60;" href="{NextPost}">Next --><a/>
+				                        {/block:NextPost}
+				                    {/block:PermalinkPagination}
+				                    </br></br>
+					            </div>
+					        </div>
+					    </div>
+				        {/block:Posts}
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/jquery.min.js"></script>
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/skel.min.js"></script>
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/main.js"></script>
+
+			<script type="text/javascript">
+				$(function() {
+					var url = document.URL;
+					console.log(url);
+					console.log(url == "http://blog.arjunkalburgi.com/")
+				    if (url.includes("post")) { 
+				            $('<style>#footer { display:none; } </style>').appendTo('body'); // show main
+				            $('<style>#main { display:none; } </style>').appendTo('body'); // show main
+							$('<style>.map { display:none; } </style>').appendTo('body');
+				    } else {
+				        $('<style>#post { display:none; }</style>').appendTo('body'); // show posts
+				    }
+				});
+			</script>
+
+			<!--Google Map-->
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsQPYuRrSrIChJFWaVZ-0CxCdBx_UJPlk"></script>
+
+			<script type="text/javascript">
+				function initialize() {
+				var mapOptions = {
+					center: { lat: 40.405622, lng: -10.636029},
+					zoom: 1
+				};
+				var map = new google.maps.Map(document.getElementById('map-canvas'),
+					mapOptions);
+
+					// CA
+					var homemarker = new google.maps.Marker({
+						position: new google.maps.LatLng(50.405622, -104.636029),
+						map: map,
+						title:"Born and Raised!"
+					});
+					var schoolmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(53.5333, -113.5000),
+						map: map,
+						title:"Current place of residence!"
+					});
+					var torontomarker = new google.maps.Marker({
+						position: new google.maps.LatLng(43.7, -79.4),
+						map: map,
+						title:"Summer 1995, Winter 1999/00, Summer 2008, Spring 2013, Summer 2014"
+					});
+					var quebecmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(46.8167, -71.2167),
+						map: map,
+						title:"Spring 2008"
+					});
+					var banffmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(51.1781, -115.5719),
+						map: map,
+						title:"Summer 2002"
+					});
+					var canmoremarker = new google.maps.Marker({
+						position: new google.maps.LatLng(51.093085, -115.358496), 
+						map: map, 
+						title:"Summer 2015"
+					})
+					var calgarymarker = new google.maps.Marker({
+						position: new google.maps.LatLng(51.0500, -114.0667),
+						map: map,
+						title:"Spring 2001"
+					});
+					var saskatoonmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(52.1333, -106.6833),
+						map: map,
+						title:"Fall 2001, Spring 2007"
+					});
+					var niagramarker = new google.maps.Marker({
+						position: new google.maps.LatLng(43.08, -79.0710),
+						map: map,
+						title:"Summer 2009"
+					});
+					var winnipegmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(49.8994, -97.1392),
+						map: map,
+						title:"Spring 1995"
+					});
+					var nakiskamarker = new google.maps.Marker({
+						position: new google.maps.LatLng(50.9440, -115.1470),
+						map: map,
+						title:"Winter 2012/13"
+					});
+					
+					// India
+					var hydrabadmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(17.3660, 78.4760),
+						map: map,
+						title:'Winter 1996, Fall/Winter 2003/04, Fall/Winter 2006/07, Summer 2013'
+					});
+					var agramarker = new google.maps.Marker({
+						position: new google.maps.LatLng(27.18, 78.02),
+						map: map,
+						title:'Summer 2013'
+					});
+					var jaipurmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(26.926, 75.8235),
+						map: map,
+						title:'Summer 2013'
+					});
+					var delhimarker = new google.maps.Marker({
+						position: new google.maps.LatLng(28.6139, 77.2089),
+						map: map,
+						title:'Winter 1996/97, Summer 2013'
+					});
+					var bengalurumarker = new google.maps.Marker({
+						position: new google.maps.LatLng(12.9667, 77.5667),
+						map: map,
+						title:'Winter 1996/97, Winter 2003/04'
+					});
+					var mumbaimarker = new google.maps.Marker({
+						position: new google.maps.LatLng(18.975, 72.8258),
+						map: map,
+						title:'Winter 2006/07'
+					});
+					var tiripatimarker = new google.maps.Marker({
+						position: new google.maps.LatLng(13.65, 79.42),
+						map: map,
+						title:'Winter 2003/04'
+					});
+
+					//US
+					var dallasmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(32.7758, -96.7967),
+						map: map,
+						title:'Fall 1999, Fall 2001, Fall 2004, Winter 2007/08, Winter 2009/10, Summer 2011'
+					});
+					var austinmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(30.25, -97.75),
+						map: map,
+						title:"Fall 2001"
+					});
+					var houstonmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(29.7628, -95.3831),
+						map: map,
+						title:"Fall 2001"
+					});
+					var midlandmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(32, -102.1),
+						map: map,
+						title:"Winter 1997/98"
+					});
+					var allenmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(33.0997, -96.6631),
+						map: map,
+						title:"Winter 2009/10, Summer 2011"
+					});
+					
+					var SFmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(37.7833, -122.4167),
+						map: map,
+						title:"Winter 2008/09, Summer 2012"
+					});
+					var fremontmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(37.5483, -121.9886),
+						map: map,
+						title:"Winter 2008/09, Summer 2012"
+					});
+					var lamarker = new google.maps.Marker({
+						position: new google.maps.LatLng(34.05, -118.25),
+						map: map,
+						title:"Winter 2008/09"
+					});
+					
+					var detroitmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(42.3086, -83.4822),
+						map: map,
+						title:"Summer 1995, Winter 2009/10"
+					});
+					var saltlakemarker = new google.maps.Marker({
+						position: new google.maps.LatLng(40.75, -111.8833),
+						map: map,
+						title:"Spring 1999, Winter 2008/09"
+					});
+					var bensalemmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(40.11, -74.9433),
+						map: map,
+						title:"Winter 1999/00"
+					});
+
+					//UK
+					var bristolmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(51.45, -2.5833),
+						map: map,
+						title:"Summer 2010, Summer 2014"
+					});
+					var londonmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(51.5072, -0.1275),
+						map: map,
+						title:"August 2003, Summer 2010"
+					});
+					var bathmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(51.38, -2.3600),
+						map: map,
+						title:"Summer 2010, Summer 2014"
+					});
+					var stonehengemarker = new google.maps.Marker({
+						position: new google.maps.LatLng(51.1788, -1.8262),
+						map: map,
+						title:"Summer 2014"
+					});
+					var stratfordavonmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(52.19, -1.7100),
+						map: map,
+						title:"Summer 2010"
+					});
+					var lancastermarker = new google.maps.Marker({
+						position: new google.maps.LatLng(54.0470, -2.8010),
+						map: map,
+						title:"Summer 2003"
+					});
+					
+					// Europe
+					var parismarker = new google.maps.Marker({
+						position: new google.maps.LatLng(48.8567, 2.3508),
+						map: map,
+						title:'Summer 2010, Spring 2012, Summer 2014'
+					});
+					var biaritzmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(43.48, -1.56),
+						map: map,
+						title:'Spring 2012'
+					});
+					var bordeauxmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(44.83, -0.56),
+						map: map, 
+						title:'Spring 2012'
+					});
+					var sansebmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(43.319879, -1.979886), 
+						map: map, 
+						title: 'Spring 2012'
+					});
+					var arlesmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(43.677681, 4.630979), 
+						map: map, 
+						title: 'Spring 2012'
+					}); 
+					var monacomarker = new google.maps.Marker({
+						position: new google.maps.LatLng(43.732946, 7.422933), 
+						map: map, 
+						title: 'Spring 2012'
+					})
+					var nicemarker = new google.maps.Marker({
+						position: new google.maps.LatLng(43.7034, 7.2663),
+						map: map,
+						title:'Spring 2012'
+					});
+					var brusselsmarker = new google.maps.Marker({
+						position: new google.maps.LatLng(50.85, 4.35),
+						map: map,
+						title:'Summer 2014'
+					});
+					var venicemarker = new google.maps.Marker({
+						position: new google.maps.LatLng(45.4375, 12.3358),
+						map: map,
+						title:'Summer 2014'
+					});
+					var pisamarker = new google.maps.Marker({
+						position: new google.maps.LatLng(43.7167, 10.4),
+						map: map,
+						title:'Summer 2014'
+					});
+					var florencemarker = new google.maps.Marker({
+						position: new google.maps.LatLng(43.7833, 11.25),
+						map: map,
+						title:'Summer 2014'
+					});
+					var genevamarker = new google.maps.Marker({
+						position: new google.maps.LatLng(46.2, 6.15),
+						map: map,
+						title:'Summer 2014'
+					});
+					var titlismarker = new google.maps.Marker({
+						position: new google.maps.LatLng(46.7725, 8.4372),
+						map: map,
+						title:'Summer 2014'
+					});
+					
+					// google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+					// 	google.maps.event.clearListeners(blogTab, 'click');
+					// });
+				}
+				google.maps.event.addDomListener(window, 'load', initialize);
+			</script>
+
+
+
+	</body>
+</html>
