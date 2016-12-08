@@ -174,6 +174,28 @@
 	    transform: none
 	}
 
+/*Post*/
+	#post {
+			padding: 0em 0 6em 0 ;
+		}
+
+			@media screen and (max-width: 736px) {
+
+				#post {
+					padding: 0em 0 4em 0 ;
+				}
+
+			}
+
+	#post .content {
+		width: 70%; 
+		margin: auto;
+	}
+
+	#post > img {
+
+	}
+
 
 /* Reset */
 
@@ -1843,7 +1865,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #f2849e !important;
+			color: #007e60 !important;
 		}
 
 	strong, b {
@@ -1864,7 +1886,12 @@
 		line-height: 1.3;
 		margin: 0 0 1em 0;
 		letter-spacing: -0.035em;
+		color: #007E60;
 	}
+
+		artcile > h1 {
+			color: white !important; 
+		}
 
 		h1 a {
 			color: inherit;
@@ -1892,7 +1919,9 @@
 		line-height: 1.5;
 		margin: 0 0 2em 0;
 		text-transform: uppercase;
-		letter-spacing: 0.35em;
+		/*letter-spacing: 0.35em;*/
+		color: #007E60;
+		
 	}
 
 		h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2064,8 +2093,8 @@
 			}
 
 			.icon.style2:hover {
-				color: #f2849e;
-				border-color: #f2849e;
+				color: #007e60;
+				border-color: #007e60;
 			}
 
 			.icon.style2:active {
@@ -2345,8 +2374,8 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-bottom-color: #f2849e;
-			box-shadow: inset 0 -1px 0 0 #f2849e;
+			border-bottom-color: #007e60;
+			box-shadow: inset 0 -1px 0 0 #007e60;
 		}
 
 	.select-wrapper {
@@ -2456,8 +2485,8 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #f2849e;
-			box-shadow: 0 0 0 1px #f2849e;
+			border-color: #007e60;
+			box-shadow: 0 0 0 1px #007e60;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2677,8 +2706,8 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			color: #f2849e !important;
-			box-shadow: inset 0 0 0 2px #f2849e;
+			color: #007e60 !important;
+			box-shadow: inset 0 0 0 2px #007e60;
 		}
 
 		input[type="submit"]:active,
@@ -2720,7 +2749,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #f2849e;
+				background-color: #007e60;
 			}
 
 			input[type="submit"].special:active,
@@ -2879,6 +2908,7 @@
 
 				.tiles article > a h2 {
 					margin: 0;
+					color: white;
 				}
 
 				.tiles article > a .content {

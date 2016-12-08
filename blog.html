@@ -168,6 +168,15 @@
 						</div>
 					</div>
 
+				<!-- Pages -->
+					<center id="Pages">
+						{block:PreviousPage}
+            			<button><a href="{PreviousPage}">PREV</a></button>
+            			{/block:PreviousPage} {block:NextPage}
+            			<button><a href="{NextPage}">NEXT</a></button>
+            			{/block:NextPage}
+					</center>
+
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
@@ -187,11 +196,7 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="https://html5up.net/uploads/demos/phantom/assets/js/jquery.min.js"></script>
-			<script src="https://html5up.net/uploads/demos/phantom/assets/js/skel.min.js"></script>
-			<script src="https://html5up.net/uploads/demos/phantom/assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="https://html5up.net/uploads/demos/phantom/assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 
 			<script type="text/javascript">
 				$(function() {
@@ -209,6 +214,27 @@
 				    }
 				});
 			</script>
+
+			<!-- More posts -->
+			<script type="text/javascript">
+				var $container = $('.content');
+				$container.infinitescroll({
+				    //[your options here],
+				    errorCallback: function(){
+				        $('.load-more').hide();
+				    }
+				});
+				$(window).unbind('.infscr');
+				$('.load-more').click(function(){
+				    $container.infinitescroll('retrieve');
+				    return false
+				});
+			</script>
+
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/skel.min.js"></script>
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="https://html5up.net/uploads/demos/phantom/assets/js/main.js"></script>
 
 			<!--Google Map-->
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsQPYuRrSrIChJFWaVZ-0CxCdBx_UJPlk"></script>
@@ -480,7 +506,6 @@
 				}
 				google.maps.event.addDomListener(window, 'load', initialize);
 			</script>
-
 
 
 	</body>
