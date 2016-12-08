@@ -113,7 +113,7 @@
 			<div id="wrapper" style="padding: 8em 0 0.1em;">
 				<!-- Main -->
 					<div id="main">
-						<div class="inner">
+						<div class="inner home">
 							<header>
 								<h1>Insights, Analysis, Random<br />
 								Arjun's World.</h1>
@@ -134,6 +134,37 @@
 									</article>
 				        		{/block:Posts}
 							</section>
+							<div>
+								<center>
+									{block:NextPage}
+										<a href="{NextPage}"><button>Next Page</button></a>
+									{/block:NextPage}
+									{block:PreviousPage}
+										<a href="{PreviousPage}"><button>Prev Page</button></a>
+									{/block:PreviousPage}
+								</center>
+							</div>
+						</div>
+						<div class="inner post">
+				        		{block:Posts}
+				        		<div class="post_inside">
+								<h1>{Title}</h1>
+								<p>{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</p>
+
+								{block:Text}
+			    				    {Body}
+			    				{/block:Text}
+								
+				        		{block:PermalinkPagination}
+			                        {block:PreviousPost}
+			                            <a style="float:left;color:#007e60;" href="{PreviousPost}"><-- Previous</a>
+			                        {/block:PreviousPost}
+			                        {block:NextPost}
+			                            <a style="float:right;color:#007e60;" href="{NextPost}">Next --><a/>
+			                        {/block:NextPost}
+			                    {/block:PermalinkPagination}
+				        		{/block:Posts}	
+			        		</div>
 						</div>
 					</div>
 
@@ -153,41 +184,6 @@
 							</ul>
 						</div>
 					</footer>
-
-				<!-- Blog page - needs to be changed -->
-					<div id="post" class="panels" style="width:100%; color: #007e60 !important;">
-				        {block:Posts}
-					    <div class="panel" style="width:100%">
-					        <div class="content" style="width:100%">
-					            <div class="fixed">
-					                <span class="small">{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</span>
-									<h1>{Title}</h1>
-									{block:HasTags}
-									    <span class="excerpt1">
-									    {block:Tags}#{Tag}</br>{/block:Tags}
-							            </span>
-							        {block:HasTags}
-							        {block:Text}
-				    				    {Body}
-				    				{/block:Text}
-				    				
-				    				</br></br>
-				    				{block:NextPost}<a href="{NextPost}">See the next post on blog.arjunkalburgi.com</a>{/block:NextPost}
-				    					
-				                    {block:PermalinkPagination}
-				                        {block:PreviousPost}
-				                            <a style="float:left;color:#007e60;" href="{PreviousPost}"><-- Previous</a>
-				                        {/block:PreviousPost}
-				                        {block:NextPost}
-				                            <a style="float:right;color:#007e60;" href="{NextPost}">Next --><a/>
-				                        {/block:NextPost}
-				                    {/block:PermalinkPagination}
-				                    </br></br>
-					            </div>
-					        </div>
-					    </div>
-				        {/block:Posts}
-					</div>
 			</div>
 
 		<!-- Scripts -->
@@ -203,11 +199,13 @@
 					console.log(url);
 					console.log(url == "http://blog.arjunkalburgi.com/")
 				    if (url.includes("post")) { 
-				            $('<style>#footer { display:none; } </style>').appendTo('body'); // show main
-				            $('<style>#main { display:none; } </style>').appendTo('body'); // show main
-							$('<style>.map { display:none; } </style>').appendTo('body');
+			            $('<style> .home { display:none; } </style>').appendTo('body');
+			            $('<style> .map { display:none; } </style>').appendTo('body');
+				    	var poststyle = '<style>body {background-color: #007e60;} .post { margin: 0 auto; max-width: 45em !important; position: relative;} .post_inside { margin-bottom: 1em; padding: 0.7em; box-shadow: 1px 1px 2px 0px; background-color: #fff; } .post > img {width: 100%; height: inherit; } </style>'
+				            
+			            $(poststyle).appendTo('body'); // show main
 				    } else {
-				        $('<style>#post { display:none; }</style>').appendTo('body'); // show posts
+				        $('<style>.post { display:none; }</style>').appendTo('body'); // show posts
 				    }
 				});
 			</script>
