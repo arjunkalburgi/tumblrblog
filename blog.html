@@ -135,6 +135,8 @@
 				        		{/block:Posts}
 							</section>
 							<div>
+								<br/>
+								<br/>
 								<center>
 									{block:NextPage}
 										<a href="{NextPage}"><button>Next Page</button></a>
@@ -149,37 +151,70 @@
 				        		{block:Posts}
 				        		<div class="post_inside">
 								<h1>{Title}</h1>
-								<p>{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</p>
+								<!-- <p>{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</p> -->
 
 								{block:Text}
 			    				    {Body}
 			    				{/block:Text}
+
+			    				<p style="font-size: larger">- Arjun Kalburgi <img style="height: 15px" src="{Favicon}"/></p>
+
 								
-				        		{block:PermalinkPagination}
+				        		<!-- {block:PermalinkPagination}
 			                        {block:PreviousPost}
-			                            <a style="float:left;color:#007e60;" href="{PreviousPost}"><-- Previous</a>
+			                            <a style="float:left;color:#007e60;" href="{PreviousPost}">Previous</a>
 			                        {/block:PreviousPost}
 			                        {block:NextPost}
-			                            <a style="float:right;color:#007e60;" href="{NextPost}">Next --><a/>
+			                            <a style="float:right;color:#007e60;" href="{NextPost}">Next<a/>
 			                        {/block:NextPost}
-			                    {/block:PermalinkPagination}
+			                    {/block:PermalinkPagination} -->
 				        		{/block:Posts}	
 			        		</div>
 						</div>
 					</div>
 
-				<!-- Pages -->
+				<!-- Pages
 					<center id="Pages">
 						{block:PreviousPage}
             			<button><a href="{PreviousPage}">PREV</a></button>
-            			{/block:PreviousPage} {block:NextPage}
+            			{/block:PreviousPage}   {block:NextPage}
             			<button><a href="{NextPage}">NEXT</a></button>
             			{/block:NextPage}
-					</center>
+					</center> -->
 
 				<!-- Footer -->
 					<footer id="footer">
-						<div class="inner">
+						<div class="inner post">
+							{block:PermalinkPagination}
+								<div class="tiles">
+		                        {block:PreviousPost}
+		                            <article class="tile">
+										<span class="image">
+											<img src="https://rawgit.com/askalburgi/tumblrblog/master/dark-bg.jpg" alt="" />
+										</span>
+										<a href="{PreviousPost}">
+											<h2>Previous Post</h2>
+											<div class="content">
+											</div>
+										</a>
+									</article>
+		                        {/block:PreviousPost}
+		                        {block:NextPost}
+		                            <article class="tile">
+										<span class="image">
+											<img src="https://rawgit.com/askalburgi/tumblrblog/master/dark-bg.jpg" alt="" />
+										</span>
+										<a href="{NextPost}">
+											<h2>Next Post</h2>
+											<div class="content">
+											</div>
+										</a>
+									</article>
+		                        {/block:NextPost}
+								<div>
+		                    {/block:PermalinkPagination}
+						</div>
+						<div class="inner home">
 							<section class="map">
 								<h2>Where I've been</h2>
 								<p>Hover over the marker to see when I visited the place!
@@ -206,7 +241,7 @@
 				    if (url.includes("post")) { 
 			            $('<style> .home { display:none; } </style>').appendTo('body');
 			            $('<style> .map { display:none; } </style>').appendTo('body');
-				    	var poststyle = '<style>body {background-color: #007e60;} .post { margin: 0 auto; max-width: 45em !important; position: relative;} .post_inside { margin-bottom: 1em; padding: 0.7em; box-shadow: 1px 1px 2px 0px; background-color: #fff; } .post > img {width: 100%; height: inherit; } </style>'
+				    	var poststyle = '<style>body {background-color: #007e60;} .post { margin: 0 auto; max-width: 45em !important; position: relative;} .post_inside { margin-bottom: 1em; padding: 0.7em; box-shadow: 1px 1px 2px 0px; background-color: #fff; } .post .post_inside figure img {width: 100%; height: inherit; } .tiles article{    width: calc(50% - 7.5em); margin: 2.5em auto 0;}</style>'
 				            
 			            $(poststyle).appendTo('body'); // show main
 				    } else {
@@ -215,7 +250,7 @@
 				});
 			</script>
 
-			<!-- More posts -->
+			<!-- More posts
 			<script type="text/javascript">
 				var $container = $('.content');
 				$container.infinitescroll({
@@ -229,15 +264,15 @@
 				    $container.infinitescroll('retrieve');
 				    return false
 				});
-			</script>
+			</script> -->
 
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]
 			<script src="https://html5up.net/uploads/demos/phantom/assets/js/skel.min.js"></script>
 			<script src="https://html5up.net/uploads/demos/phantom/assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="https://html5up.net/uploads/demos/phantom/assets/js/main.js"></script>
+			<script src="http://html5up.net/uploads/demos/phantom/assets/js/main.js"></script>-->
 
 			<!--Google Map-->
-			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsQPYuRrSrIChJFWaVZ-0CxCdBx_UJPlk"></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG1928oViqdVlGLMiiSo-uqYZvy6BJuRM"></script>
 
 			<script type="text/javascript">
 				function initialize() {
