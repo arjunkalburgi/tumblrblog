@@ -3621,9 +3621,13 @@
 				margin-left: 2.5em;
 			}
 
-			#footer > .inner h2 {
+			#footer > .inner h2.post {
 				margin: 0px;
 			}
+
+			#footer > .inner .copyright.post {
+				margin: 0px;
+			}			
 
 			#footer > .inner .copyright {
 				width: 100%;

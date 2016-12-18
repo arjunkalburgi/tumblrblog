@@ -197,8 +197,8 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner post">
-							<h2>Insights, Analysis, Random  -  Arjun's World.</h2>
-							<ul class="copyright">
+							<h2 class="post">Insights, Analysis, Random  -  Arjun's World.</h2>
+							<ul class="post copyright">
 								<li>&copy; Arjun Kalburgi's Blog. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Modifications: <a href="www.arjunkalburgi.com">Arjun Kalburgi</a></li>
 							</ul>
 						</div>
@@ -224,10 +224,11 @@
 					console.log(url);
 					console.log(url == "http://blog.arjunkalburgi.com/")
 				    if (url.includes("post")) { 
+				    	$('#footer').css('padding','6em 0 6em 0')
 				    	var poststyle = '<style> .inner.home { display:none; } .map { display:none; } body {background-color: #aed6cc;} .post { max-width: 45em !important;}</style>'
 			            $(poststyle).appendTo('body'); 
 				    } else {
-				        $('<style>.post { display:none; }</style>').appendTo('body'); // show posts
+				    	$('.post').css('display', 'none'); 
 				    }
 				});
 			</script>
