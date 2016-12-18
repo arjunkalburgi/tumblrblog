@@ -9,7 +9,7 @@
 
 /* Added! */
 	.header {
-	    background-color: #aed6cc !important; /*#f3f3f3;*/
+	    background-color: #007E60 !important; /*#f3f3f3;*/
 	    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .04);
 	    position: fixed;
 	    text-align: center;
@@ -192,7 +192,7 @@
 		margin: auto;
 	}
 
-	#post > .card-content figure {
+	#main .post .card-content figure {
 		text-align: center;
 	}
 
