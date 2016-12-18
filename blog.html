@@ -99,14 +99,13 @@
 
 		<!-- Header -->
 			<header class="header">
-			<nav class="top-nav">
-			    <a href="http://blog.arjunkalburgi.com" class="logo"></a>
-			    <div class="links">
-			        <a href="http://arjunkalburgi.com/index.html#bottom"><span>Home</span><span>Home</span></a>         </div><div class="links">
-			        <a href="http://arjunkalburgi.com/projects.html"><span>Projects</span><span>Projects</span></a>
-			    </div>
-			</nav>
-					
+				<nav class="top-nav">
+				    <a href="http://blog.arjunkalburgi.com" class="logo"></a>
+				    <div class="links">
+				        <a href="http://arjunkalburgi.com/index.html#bottom"><span>Home</span><span>Home</span></a>         </div><div class="links">
+				        <a href="http://arjunkalburgi.com/projects.html"><span>Projects</span><span>Projects</span></a>
+				    </div>
+				</nav>
 			</header>
 
 		<!-- Wrapper -->
@@ -138,12 +137,12 @@
 								<br/>
 								<br/>
 								<center>
-									{block:NextPage}
-										<a href="{NextPage}"><button>Next Page</button></a>
-									{/block:NextPage}
 									{block:PreviousPage}
-										<a href="{PreviousPage}"><button>Prev Page</button></a>
+										<a href="{PreviousPage}"><button>Back</button></a>
 									{/block:PreviousPage}
+									{block:NextPage}
+										<a href="{NextPage}"><button>Next</button></a>
+									{/block:NextPage}
 								</center>
 							</div>
 						</div>
@@ -151,44 +150,57 @@
 			        		{block:Posts}
 			        		<div class="card-content">
     			            	<span class="card-title">{Title}</span>
-
 								{block:Text}
 			    				    {Body}
 			    				{/block:Text}
-
-			    				</br>
-			    				<p style="font-size: larger">- Arjun Kalburgi <img style="height: 15px" src="{Favicon}"/></p>
+			    				{block:Photo}
+		    						<figure><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></figure>
+			                        
+			                        {block:Caption}
+			                            <div class="caption">{Caption}</div>
+			                        {/block:Caption}
+				                {/block:Photo}
+				                {block:Panorama}
+		    						<figure><img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/></figure>
+			                        
+			                        {block:Caption}
+			                            <div class="caption">{Caption}</div>
+			                        {/block:Caption}
+				                {/block:Panorama}
+				                {block:Photoset}
+		    						<figure><img src="{Photoset-500}" alt="{PhotoAlt}"/></figure>
+			                        
+			                        {block:Caption}
+			                            <div class="caption">{Caption}</div>
+			                        {/block:Caption}
+				                {/block:Photoset}
+			    				</br><p style="font-size: larger">- Arjun Kalburgi <img style="height: 15px" src="{Favicon}"/></p>
 							</div>
 							<div class="card-action">
 								{block:PermalinkPagination}
-			                        {block:PreviousPost}
-											<a href="{PreviousPost}">
-												Previous Post
-											</a>
-			                        {/block:PreviousPost}
 			                        {block:NextPost}
 											<a href="{NextPost}">
 												Next Post
 											</a>
 			                        {/block:NextPost}
+			                        {block:PreviousPost}
+											<a href="{PreviousPost}">
+												Previous Post
+											</a>
+			                        {/block:PreviousPost}
 			                    {/block:PermalinkPagination}
 							</div>
 			        		{/block:Posts}	
 						</div>
 					</div>
 
-				<!-- Pages
-					<center id="Pages">
-						{block:PreviousPage}
-            			<button><a href="{PreviousPage}">PREV</a></button>
-            			{/block:PreviousPage}   {block:NextPage}
-            			<button><a href="{NextPage}">NEXT</a></button>
-            			{/block:NextPage}
-					</center> -->
-
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner post">
+							<h2>Insights, Analysis, Random  -  Arjun's World.</h2>
+							<ul class="copyright">
+								<li>&copy; Arjun Kalburgi's Blog. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Modifications: <a href="www.arjunkalburgi.com">Arjun Kalburgi</a></li>
+							</ul>
 						</div>
 						<div class="inner home">
 							<section class="map">
@@ -199,9 +211,6 @@
 								<br/>
 								<div id="map-canvas" style="height: 241px;"></div>
 							</section>
-							<ul class="copyright">
-								<li>&copy; Arjun Kalburgi's Blog. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Modifications: <a href="www.arjunkalburgi.com">Arjun Kalburgi</a></li>
-							</ul>
 						</div>
 					</footer>
 			</div>
@@ -215,11 +224,8 @@
 					console.log(url);
 					console.log(url == "http://blog.arjunkalburgi.com/")
 				    if (url.includes("post")) { 
-			            $('<style> .home { display:none; } </style>').appendTo('body');
-			            $('<style> .map { display:none; } </style>').appendTo('body');
-				    	var poststyle = '<style>body {background-color: #aed6cc;} .post { margin: 0 auto; max-width: 45em !important; position: relative;} .post_inside { margin-bottom: 1em; padding: 0.7em; box-shadow: 1px 1px 2px 0px; background-color: #fff; } .post .post_inside figure img {width: 100%; height: inherit; } .tiles article{    width: calc(50% - 7.5em); margin: 2.5em auto 0;}</style>'
-				            
-			            $(poststyle).appendTo('body'); // show main
+				    	var poststyle = '<style> .inner.home { display:none; } .map { display:none; } body {background-color: #aed6cc;} .post { max-width: 45em !important;}</style>'
+			            $(poststyle).appendTo('body'); 
 				    } else {
 				        $('<style>.post { display:none; }</style>').appendTo('body'); // show posts
 				    }
@@ -517,7 +523,6 @@
 				}
 				google.maps.event.addDomListener(window, 'load', initialize);
 			</script>
-
 
 	</body>
 </html>

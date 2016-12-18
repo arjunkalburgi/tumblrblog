@@ -3604,6 +3604,7 @@
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
 			flex-direction: row;
+			text-align: center;
 		}
 
 			#footer > .inner > * > :last-child {
@@ -3620,10 +3621,14 @@
 				margin-left: 2.5em;
 			}
 
+			#footer > .inner h2 {
+				margin: 0px;
+			}
+
 			#footer > .inner .copyright {
 				width: 100%;
 				padding: 0;
-				margin-top: 5em;
+				/*margin-top: 5em;*/
 				list-style: none;
 				font-size: 0.8em;
 				color: rgba(88, 88, 88, 0.5);
@@ -3642,6 +3647,11 @@
 				}
 
 					#footer > .inner .copyright li:first-child {
+						border-left: 0;
+						padding-left: 0;
+						margin-left: 0;
+					}
+					#footer > .inner .copyright li:second-child {
 						border-left: 0;
 						padding-left: 0;
 						margin-left: 0;
