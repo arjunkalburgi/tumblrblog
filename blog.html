@@ -147,29 +147,33 @@
 								</center>
 							</div>
 						</div>
-						<div class="inner post">
-				        		{block:Posts}
-				        		<div class="post_inside">
-								<h1>{Title}</h1>
-								<!-- <p>{Month} {DayOfMonth}{DayOfMonthSuffix} {Year}</p> -->
+						<div class="card inner post">
+			        		{block:Posts}
+			        		<div class="card-content">
+    			            	<span class="card-title">{Title}</span>
 
 								{block:Text}
 			    				    {Body}
 			    				{/block:Text}
 
+			    				</br>
 			    				<p style="font-size: larger">- Arjun Kalburgi <img style="height: 15px" src="{Favicon}"/></p>
-
-								
-				        		<!-- {block:PermalinkPagination}
+							</div>
+							<div class="card-action">
+								{block:PermalinkPagination}
 			                        {block:PreviousPost}
-			                            <a style="float:left;color:#007e60;" href="{PreviousPost}">Previous</a>
+											<a href="{PreviousPost}">
+												Previous Post
+											</a>
 			                        {/block:PreviousPost}
 			                        {block:NextPost}
-			                            <a style="float:right;color:#007e60;" href="{NextPost}">Next<a/>
+											<a href="{NextPost}">
+												Next Post
+											</a>
 			                        {/block:NextPost}
-			                    {/block:PermalinkPagination} -->
-				        		{/block:Posts}	
-			        		</div>
+			                    {/block:PermalinkPagination}
+							</div>
+			        		{/block:Posts}	
 						</div>
 					</div>
 
@@ -185,34 +189,6 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner post">
-							{block:PermalinkPagination}
-								<div class="tiles">
-		                        {block:PreviousPost}
-		                            <article class="tile">
-										<span class="image">
-											<img src="https://rawgit.com/askalburgi/tumblrblog/master/dark-bg.jpg" alt="" />
-										</span>
-										<a href="{PreviousPost}">
-											<h2>Previous Post</h2>
-											<div class="content">
-											</div>
-										</a>
-									</article>
-		                        {/block:PreviousPost}
-		                        {block:NextPost}
-		                            <article class="tile">
-										<span class="image">
-											<img src="https://rawgit.com/askalburgi/tumblrblog/master/dark-bg.jpg" alt="" />
-										</span>
-										<a href="{NextPost}">
-											<h2>Next Post</h2>
-											<div class="content">
-											</div>
-										</a>
-									</article>
-		                        {/block:NextPost}
-								<div>
-		                    {/block:PermalinkPagination}
 						</div>
 						<div class="inner home">
 							<section class="map">
