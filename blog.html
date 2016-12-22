@@ -47,51 +47,37 @@
 		<meta name="if:Show Link 3" content="1" />
 
 		<style type="text/css">
-			.tiles article:nth-child(1) .image:before {
-	            background-color: #e8846b; 
-	        }
-	        .tiles article:nth-child(2) .image:before {
-	            background-color: #16528e; 
-	        }
-	        .tiles article:nth-child(3) .image:before {
-	            background-color: #e54b4b; 
-	        }
-	        .tiles article:nth-child(4) .image:before {
-	            background-color: #a2c5bf; 
-	        }
-	        .tiles article:nth-child(5) .image:before {
+			.tiles article:nth-child(10n+1) .image:before {
 	            background-color: #167c80; 
 	        }
-	        .tiles article:nth-child(6) .image:before {
-	            background-color: #0082c8; 
-	        }
-	        .tiles article:nth-child(7) .image:before {
-	            background-color: #72616e; 
-	        }
-	        .tiles article:nth-child(8) .image:before {
-	            background-color: #e8846b; 
-	        }
-	        .tiles article:nth-child(9) .image:before {
-	            background-color: #16528e; 
-	        }
-	        .tiles article:nth-child(10) .image:before {
+	        .tiles article:nth-child(10n+2) .image:before {
 	            background-color: #e54b4b; 
 	        }
-	        .tiles article:nth-child(11) .image:before {
-	            background-color: #a2c5bf; 
-	        }
-	        .tiles article:nth-child(12) .image:before {
-	            background-color: #167c80; 
-	        }
-	        .tiles article:nth-child(13) .image:before {
-	            background-color: #0082c8; 
-	        }
-	        .tiles article:nth-child(14) .image:before {
+	        .tiles article:nth-child(10n+3) .image:before {
 	            background-color: #72616e; 
 	        }
-	        .tiles article:nth-child(15) .image:before {
-	            background-color: #f2849e; 
+	        .tiles article:nth-child(10n+4) .image:before {
+	            background-color: #e8846b; 
 	        }
+	        .tiles article:nth-child(10n+5) .image:before {
+	            background-color: #ae85ca; 
+	        }
+	        .tiles article:nth-child(10n+6) .image:before {
+	            background-color: #a2c5bf; 
+	        }
+	        .tiles article:nth-child(10n+7) .image:before {
+	            background-color: #16528e; 
+	        }
+	        .tiles article:nth-child(10n+8) .image:before {
+	            background-color: #c75b9b; 
+	        }
+	        .tiles article:nth-child(10n+9) .image:before {
+	            background-color: #0082c8; 
+	        }
+	        .tiles article:nth-child(10n+10) .image:before {
+	            background-color: #cad07b; 
+	        }
+
 		</style>
 
 	</head>
@@ -137,12 +123,13 @@
 								<br/>
 								<br/>
 								<center>
-									{block:PreviousPage}
+									<!-- {block:PreviousPage}
 										<a href="{PreviousPage}"><button>Back</button></a>
 									{/block:PreviousPage}
 									{block:NextPage}
 										<a href="{NextPage}"><button>Next</button></a>
-									{/block:NextPage}
+									{/block:NextPage} -->
+									<a class="load-more-btn" href="/page/2"><button>Load more</button></a>
 								</center>
 							</div>
 						</div>
@@ -233,21 +220,49 @@
 				});
 			</script>
 
-			<!-- More posts
+			<!-- More posts -->
+			<script src="http://static.tumblr.com/vppzax2/7nlnmw6vx/envogue-plugins.min.js"></script>
 			<script type="text/javascript">
-				var $container = $('.content');
-				$container.infinitescroll({
-				    //[your options here],
-				    errorCallback: function(){
-				        $('.load-more').hide();
-				    }
-				});
-				$(window).unbind('.infscr');
-				$('.load-more').click(function(){
-				    $container.infinitescroll('retrieve');
-				    return false
-				});
-			</script> -->
+				// Thank you http://rndmband.tumblr.com/
+				var $tilegrid = $('.tiles');
+	            var $initialNumberOfPosts = $('.tile').length; // Get number of posts
+	            $tilegrid.infinitescroll({
+	                navSelector: ".load-more-btn",
+	                nextSelector: ".load-more-btn",
+	                itemSelector: ".tile",
+	                
+	                behavior: 'twitter',
+	                
+	                loading: {
+	                    finishedMsg: 'No more posts',
+	                    img: 'http://static.tumblr.com/cmghtlm/zWPnh0xhe/ajax-loader.gif',
+	                    msgText: ''
+	                }
+	            },
+	            function ( newElements ) {
+	                //call for likes
+	                var $currentNumberOfPosts = $('.tile').length; 
+	                var pageNumber = Math.ceil($currentNumberOfPosts / $initialNumberOfPosts); 
+	                Tumblr.LikeButton.get_status_by_page(pageNumber); 
+	                
+	                //call images loaded
+		            var $newElems = $( newElements ).css({ opacity: 0 });
+		            $newElems.imagesLoaded(function(){
+		              $newElems.animate({ opacity: 1 });
+		              $container.isotope( 'appended', $newElems, true );
+	                });
+	                
+	                $(document).foundation('reveal', 'reflow');
+	                
+	                //call photoset slider
+	                // $('.photoset-slider').slick({
+	                //     slidesToShow: 1,
+	                //     slidesToScroll: 1,
+	                //     autoplay: true,
+	                //     autoplaySpeed: 2000,
+	                // });
+	            });
+			</script>
 
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]
 			<script src="https://html5up.net/uploads/demos/phantom/assets/js/skel.min.js"></script>
