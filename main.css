@@ -3246,7 +3246,7 @@
 	}
 
 	@media screen and (max-width: 736px) {
-		.card .inner {
+		.card.inner {
 			width: 95% !important; 
 		}
 		.card .card-content figure img, .card .card-content figure iframe {
