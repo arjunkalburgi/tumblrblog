@@ -3197,6 +3197,12 @@
 	  border-radius: 0 0 2px 2px;
 	}
 
+	@media screen and (max-width: 736px) {
+		.card .inner {
+			width: 95% !important; 
+		}
+	}
+
 	.card .card-content p {
 	  margin: 0;
 	  color: inherit;
