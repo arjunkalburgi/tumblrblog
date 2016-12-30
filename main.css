@@ -3197,12 +3197,6 @@
 	  border-radius: 0 0 2px 2px;
 	}
 
-	@media screen and (max-width: 736px) {
-		.card .inner {
-			width: 95% !important; 
-		}
-	}
-
 	.card .card-content p {
 	  margin: 0;
 	  color: inherit;
@@ -3249,6 +3243,16 @@
 	.card .card-reveal .card-title {
 	  cursor: pointer;
 	  display: block;
+	}
+
+	@media screen and (max-width: 736px) {
+		.card .inner {
+			width: 95% !important; 
+		}
+		.card .card-content figure img {
+			width: 100%; 
+			height: auto;
+		}
 	}
 
 /* Header */
