@@ -3249,7 +3249,7 @@
 		.card .inner {
 			width: 95% !important; 
 		}
-		.card .card-content figure img {
+		.card .card-content figure img, .card .card-content figure iframe {
 			width: 100%; 
 			height: auto;
 		}
